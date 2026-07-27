@@ -4,42 +4,40 @@ import numpy as np
 import joblib
 import os
 from datetime import datetime
-from sklearn.ensemble import RandomForestRegressor
 
 st.set_page_config(page_title="Siya Dlamini - Casino Analytics Hub", layout="wide")
 
 LOG_FILE = "app_data/prediction_logs.csv"
 TRAINING_LOG_FILE = "app_data/training_logs.csv"
 
-# --- Advanced MLOps Logging Functions ---
+LOG_COLUMNS = [
+    "Timestamp", "Casino_ID", "Game_ID", "Cohort",
+    "Predicted_Players", "Actual_Players", "Absolute_Error",
+    "APE_%", "Residual", "Tree_Uncertainty_Std"
+]
+
+
 def load_logs():
-    """Loads prediction logs with full metric schema."""
     if os.path.exists(LOG_FILE) and os.path.getsize(LOG_FILE) > 0:
         try:
             return pd.read_csv(LOG_FILE)
         except pd.errors.EmptyDataError:
             pass
-    # Extended schema with Data Science metrics
-    return pd.DataFrame(columns=[
-        "Timestamp", "Casino_ID", "Game_ID", "Cohort", 
-        "Predicted_Players", "Actual_Players", "Absolute_Error", 
-        "APE_%", "Residual", "Tree_Uncertainty_Std"
-    ])
+    return pd.DataFrame(columns=LOG_COLUMNS)
+
 
 def save_log(casino, game, cohort, prediction, uncertainty, clean_df):
-    """Calculates ground truth and error metrics, then saves to ledger."""
     os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
     df = load_logs()
-    
-    # 1. Fetch Ground Truth from historical clean_df if available
+
+    # look up ground truth in the historical data, if this combo exists
     sub = clean_df[(clean_df['CASINO_ID'] == casino) & (clean_df['GAME_ID'] == game)]
     actual = int(sub['PLAYER_ID'].nunique()) if not sub.empty else None
-    
-    # 2. Calculate Error Metrics if Ground Truth exists
+
     abs_error = abs(actual - prediction) if actual is not None else None
     ape = (abs_error / actual * 100) if (actual is not None and actual > 0) else None
     residual = (actual - prediction) if actual is not None else None
-    
+
     new_entry = pd.DataFrame([{
         "Timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "Casino_ID": casino,
@@ -52,23 +50,26 @@ def save_log(casino, game, cohort, prediction, uncertainty, clean_df):
         "Residual": round(residual, 2) if residual is not None else None,
         "Tree_Uncertainty_Std": round(uncertainty, 2)
     }])
-    
+
     df = pd.concat([df, new_entry], ignore_index=True)
     df.to_csv(LOG_FILE, index=False)
+
 
 def load_training_logs():
     if not os.path.exists(TRAINING_LOG_FILE):
         return None
     df = pd.read_csv(TRAINING_LOG_FILE)
+    # strip mlflow's metrics./params./tags. prefixes
     df.columns = [col.replace('metrics.', '').replace('params.', '').replace('tags.', '') for col in df.columns]
     return df
 
-# --- Cached Resource Loaders ---
+
 @st.cache_resource
 def load_recommendation_data():
     clean_data = pd.read_parquet('app_data/clean_df.parquet')
     sim_data = pd.read_parquet('app_data/similarity_df.parquet')
     return clean_data, sim_data
+
 
 @st.cache_resource
 def load_predictor_data():
@@ -77,13 +78,14 @@ def load_predictor_data():
     clean_data = pd.read_parquet('app_data/clean_df.parquet')
     return cohorts, profiles, clean_data
 
+
 @st.cache_resource
 def load_models():
     model = joblib.load('app_data/player_predictor_model.joblib')
     features = joblib.load('app_data/model_features.joblib')
     return model, features
 
-# --- Navigation ---
+
 st.sidebar.title("Analytics Hub")
 app_mode = st.sidebar.radio("Select a Tool:", [
     "Game Recommendations",
@@ -92,13 +94,10 @@ app_mode = st.sidebar.radio("Select a Tool:", [
     "Model Training Logs"
 ])
 
-# ==========================================
-# TOOL 1: GAME RECOMMENDATIONS
-# ==========================================
 if app_mode == "Game Recommendations":
     st.title("Game Recommendation Engine")
     st.markdown("Finds the best new games for a casino based on historical behavioral profiles.")
-    
+
     try:
         clean_df, similarity_df = load_recommendation_data()
     except FileNotFoundError:
@@ -151,13 +150,10 @@ if app_mode == "Game Recommendations":
                 column_config={"Relevance_Score": st.column_config.NumberColumn(format="%.4f")}
             )
 
-# ==========================================
-# TOOL 2: PLAYER PREDICTOR
-# ==========================================
 elif app_mode == "Player Predictor":
     st.title("Target Player Predictor")
     st.markdown("Forecasts how many unique players a game will attract at a given casino.")
-    
+
     try:
         casino_cohorts, game_profiles, clean_df = load_predictor_data()
         rf_model, model_features = load_models()
@@ -178,54 +174,46 @@ elif app_mode == "Player Predictor":
         feature_dict = {'COHORT': cohort_val, **game_vector}
         input_df = pd.DataFrame([feature_dict]).reindex(columns=model_features, fill_value=0)
 
-        # 1. Prediction Point Estimate
         prediction = rf_model.predict(input_df)[0]
 
-        # 2. Calculate Prediction Uncertainty (Standard Deviation across all Trees)
+        # spread of the individual tree predictions gives a rough uncertainty estimate
         tree_predictions = [tree.predict(input_df)[0] for tree in rf_model.estimators_]
         uncertainty_std = np.std(tree_predictions)
 
-        # 3. Save Log with Ground Truth and Error Evaluation
         save_log(pred_casino, pred_game, cohort_val, prediction, uncertainty_std, clean_df)
 
-        st.success("Prediction generated and logged with diagnostic metrics.")
-        
+        st.success("Prediction generated and logged.")
+
         col_res1, col_res2 = st.columns(2)
         col_res1.metric(
             label=f"Expected Active Players ({pred_game} @ {pred_casino})",
             value=f"{int(prediction)} Players"
         )
         col_res2.metric(
-            label="Model Variance / Uncertainty (Tree Std Dev)",
+            label="Uncertainty (Tree Std Dev)",
             value=f"± {uncertainty_std:.2f} Players",
-            help="Lower values indicate high agreement across decision trees."
+            help="Lower values mean the trees agree more on this prediction."
         )
 
-# ==========================================
-# TOOL 3: LIVE PREDICTION LOGS (MODEL PERFORMANCE DIAGNOSTICS)
-# ==========================================
 elif app_mode == "Live Prediction Logs":
-    st.title("📊 Model Inference Diagnostics & Precision Logs")
-    st.markdown("Real-time performance tracking, error metrics, and variance analysis for retraining evaluation.")
+    st.title("📊 Model Inference Diagnostics")
+    st.markdown("Live error metrics and variance tracking, useful for deciding when to retrain.")
 
     log_df = load_logs()
 
     if log_df.empty:
-        st.info("No inference logs registered yet. Navigate to the Player Predictor to generate predictions.")
+        st.info("No predictions logged yet - head to the Player Predictor to generate some.")
     else:
-        # Filter for rows where ground truth actuals are available
+        # only rows with a known ground truth can be evaluated
         eval_df = log_df[log_df['Actual_Players'] != "Unobserved"].copy()
-        
+
         if not eval_df.empty:
-            eval_df['Absolute_Error'] = pd.to_numeric(eval_df['Absolute_Error'])
-            eval_df['APE_%'] = pd.to_numeric(eval_df['APE_%'])
-            eval_df['Predicted_Players'] = pd.to_numeric(eval_df['Predicted_Players'])
-            eval_df['Actual_Players'] = pd.to_numeric(eval_df['Actual_Players'])
-            
-            # --- Live Model KPI Scorecard ---
-            st.subheader("Live Operational Model Performance")
+            for col in ['Absolute_Error', 'APE_%', 'Predicted_Players', 'Actual_Players']:
+                eval_df[col] = pd.to_numeric(eval_df[col])
+
+            st.subheader("Live Model Performance")
             kpi1, kpi2, kpi3, kpi4 = st.columns(4)
-            
+
             live_mae = eval_df['Absolute_Error'].mean()
             live_rmse = np.sqrt((eval_df['Absolute_Error'] ** 2).mean())
             mean_mape = eval_df['APE_%'].mean()
@@ -236,15 +224,12 @@ elif app_mode == "Live Prediction Logs":
             kpi3.metric("Mean APE (Error %)", f"{mean_mape:.1f}%")
             kpi4.metric("Avg Tree Uncertainty", f"± {avg_uncertainty:.2f}")
 
-            # --- Visual Error Analysis ---
-            st.markdown("### Actual vs. Predicted Performance")
+            st.markdown("### Actual vs. Predicted")
             chart_data = eval_df[['Timestamp', 'Predicted_Players', 'Actual_Players']].set_index('Timestamp')
             st.line_chart(chart_data)
-
         else:
-            st.warning("Logs recorded, but no ground-truth observations matched for evaluation yet.")
+            st.warning("Logs recorded, but none of them have ground-truth observations to evaluate against yet.")
 
-        # --- Full Detailed Ledger ---
         st.markdown("### Inference Ledger")
         st.dataframe(
             log_df.sort_values(by="Timestamp", ascending=False),
@@ -256,9 +241,6 @@ elif app_mode == "Live Prediction Logs":
             }
         )
 
-# ==========================================
-# TOOL 4: MODEL TRAINING LOGS
-# ==========================================
 elif app_mode == "Model Training Logs":
     st.title("Model Training History")
     st.markdown("Metrics and hyperparameters logged by MLflow during training.")
@@ -268,6 +250,7 @@ elif app_mode == "Model Training Logs":
     if training_df is None or training_df.empty:
         st.warning(f"No training logs found at `{TRAINING_LOG_FILE}` - export the MLflow data from the notebook first.")
     else:
+        # newest run is row 0
         latest_run = training_df.iloc[0]
 
         st.subheader("Latest Production Model Metrics")
