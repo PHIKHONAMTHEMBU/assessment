@@ -16090,3 +16090,71 @@ having count(*) > 1
 [0m00:07:25.566521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000264955D7D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026498CC0890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026498CC05D0>]}
 [0m00:07:25.566929 [debug] [MainThread]: Flushing usage events
 [0m00:07:26.563154 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:26:29.792959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CD5C890AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CD5ED9BD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CD5ED9B890>]}
+
+
+============================== 21:26:29.803325 | 0eca5e12-da25-4678-b7de-558fb363e039 ==============================
+[0m21:26:29.803325 [info ] [MainThread]: Running with dbt=1.12.0
+[0m21:26:29.804372 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\phikh\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\phikh\\Desktop\\Assessment - Durban\\Game\\casino_games_models\\logs'}
+[0m21:26:29.845783 [info ] [MainThread]: dbt version: 1.12.0
+[0m21:26:29.846448 [info ] [MainThread]: python version: 3.13.9
+[0m21:26:29.847183 [info ] [MainThread]: python path: C:\Users\phikh\Desktop\Assessment - Durban\Game\dbt-env\Scripts\python.exe
+[0m21:26:29.847807 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m21:26:34.987840 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m21:26:34.988415 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m21:26:34.988840 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m21:26:35.356550 [info ] [MainThread]: Using profiles dir at C:\Users\phikh\.dbt
+[0m21:26:35.357526 [info ] [MainThread]: Using profiles.yml file at C:\Users\phikh\.dbt\profiles.yml
+[0m21:26:35.358231 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\dbt_project.yml
+[0m21:26:35.360004 [info ] [MainThread]: adapter type: snowflake
+[0m21:26:35.360512 [info ] [MainThread]: adapter version: 1.12.0
+[0m21:26:35.510724 [info ] [MainThread]: Configuration:
+[0m21:26:35.511596 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m21:26:35.512305 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m21:26:35.513073 [info ] [MainThread]: Required dependencies:
+[0m21:26:35.514042 [debug] [MainThread]: Executing "git --help"
+[0m21:26:35.580596 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m21:26:35.581280 [debug] [MainThread]: STDERR: "b''"
+[0m21:26:35.581770 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m21:26:35.582628 [info ] [MainThread]: Connection:
+[0m21:26:35.583433 [info ] [MainThread]:   account: CPARMEO-XQ80160
+[0m21:26:35.583960 [info ] [MainThread]:   user: phikhonamthembu
+[0m21:26:35.584444 [info ] [MainThread]:   database: CASINO_GAMES_DB
+[0m21:26:35.584896 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m21:26:35.585327 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m21:26:35.585750 [info ] [MainThread]:   schema: public
+[0m21:26:35.586171 [info ] [MainThread]:   authenticator: None
+[0m21:26:35.586601 [info ] [MainThread]:   oauth_client_id: None
+[0m21:26:35.587005 [info ] [MainThread]:   query_tag: None
+[0m21:26:35.587509 [info ] [MainThread]:   client_session_keep_alive: False
+[0m21:26:35.588207 [info ] [MainThread]:   host: None
+[0m21:26:35.588862 [info ] [MainThread]:   port: None
+[0m21:26:35.589408 [info ] [MainThread]:   proxy_host: None
+[0m21:26:35.589838 [info ] [MainThread]:   proxy_port: None
+[0m21:26:35.590226 [info ] [MainThread]:   protocol: None
+[0m21:26:35.590719 [info ] [MainThread]:   connect_retries: 1
+[0m21:26:35.591208 [info ] [MainThread]:   connect_timeout: None
+[0m21:26:35.591853 [info ] [MainThread]:   retry_on_database_errors: False
+[0m21:26:35.592286 [info ] [MainThread]:   retry_all: False
+[0m21:26:35.593112 [info ] [MainThread]:   insecure_mode: False
+[0m21:26:35.593743 [info ] [MainThread]:   reuse_connections: True
+[0m21:26:35.594204 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m21:26:35.594642 [info ] [MainThread]:   workload_identity_provider: None
+[0m21:26:35.595053 [info ] [MainThread]:   workload_identity_entra_resource: None
+[0m21:26:35.595489 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m21:26:35.596319 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m21:26:36.042582 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m21:26:36.046131 [debug] [MainThread]: Using snowflake connection "debug"
+[0m21:26:36.046541 [debug] [MainThread]: On debug: select 1 as id
+[0m21:26:36.046877 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:26:39.750775 [debug] [MainThread]: SQL status: SUCCESS 1 in 3.703 seconds
+[0m21:26:39.752784 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m21:26:39.753691 [info ] [MainThread]: [32mAll checks passed![0m
+[0m21:26:39.755166 [debug] [MainThread]: Command `dbt debug` succeeded at 21:26:39.754970 after 10.28 seconds
+[0m21:26:39.755925 [debug] [MainThread]: Connection 'debug' was left open.
+[0m21:26:39.756596 [debug] [MainThread]: On debug: Close
+[0m21:26:40.407039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CD00B589D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CD00D8D5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CD00C4E140>]}
+[0m21:26:40.407865 [debug] [MainThread]: Flushing usage events
+[0m21:26:50.439383 [debug] [MainThread]: An error was encountered while trying to flush usage events
