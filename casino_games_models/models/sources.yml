@@ -1,0 +1,14 @@
+version: 1
+
+sources:
+  - name: casino_activity_games
+    description: "This source contains data related to casino games, including game details and player activity."
+    database: CASINO_GAMES_DB
+    schema: RAW
+    tables:
+      - name: raw_dim_game
+        description: "This table contains a list of games with their respective categories, themes, and mechanics."
+      - name: raw_fact_activity
+        description: "This table contains daily casino activity, including player interactions with games."
+      - name: raw_dim_currency
+        description: "This table contains information about different currencies used in the casino games."

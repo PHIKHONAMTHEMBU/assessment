@@ -1,0 +1,71 @@
+version: 1
+
+models:
+  - name: slv_dim_game
+    description: this model contains list of games with their respective categories , themes and mechanics
+    columns:
+      - name: game_id
+        tests:
+            - unique
+            - not_null
+      - name: game_type
+        tests:
+            - not_null
+
+  - name: slv_fact_activity
+    description: this model contains daily casino activity
+    columns:
+      - name: casino_id
+        tests: 
+            - not_null
+      - name: player_id
+        tests: 
+            - not_null
+      - name: game_id
+        tests:
+            - not_null
+            - relationships:
+                to: ref('slv_dim_game')
+                field: game_id
+      - name: currency_id
+        tests:
+            - not_null
+            - relationships:
+                to: ref('slv_dim_currency')
+                field: currency_id
+      - name: total_spins
+        tests: 
+            - not_null
+  - name: gl_activity
+    description: this model contains daily casino activity
+    columns:
+      - name: casino_id
+        tests: 
+            - not_null
+      - name: player_id
+        tests: 
+            - not_null
+      - name: game_id
+        tests:
+            - not_null
+            - relationships:
+                to: ref('slv_dim_game')
+                field: game_id
+      - name: currency_id
+        tests:
+            - not_null
+            - relationships:
+                to: ref('slv_dim_currency')
+                field: currency_id
+      - name: total_spins
+        tests: 
+            - not_null
+      - name: activity_date
+        tests: 
+            - not_null
+      - name: golive_date
+        tests: 
+            - not_null
+
+
+

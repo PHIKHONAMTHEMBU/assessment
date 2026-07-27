@@ -1,0 +1,6 @@
+Timestamp,Casino_ID,Game_ID,Predicted_Players,Cohort,Actual_Players,Absolute_Error,APE_%,Residual,Tree_Uncertainty_Std
+2026-07-27 20:29:00,CASINO_103,GAME_10606,4.0,,,,,,
+2026-07-27 20:31:24,CASINO_103,GAME_10606,4.0,,,,,,
+2026-07-27 20:31:51,CASINO_137,GAME_10606,1.0,,,,,,
+2026-07-27 20:34:19,CASINO_137,GAME_10606,1.42,0.0,Unobserved,,,,0.57
+2026-07-27 20:34:32,CASINO_137,GAME_10856,13.16,0.0,Unobserved,,,,8.05
