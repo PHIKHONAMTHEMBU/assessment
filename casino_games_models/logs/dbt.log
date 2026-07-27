@@ -16158,3 +16158,2621 @@ having count(*) > 1
 [0m21:26:40.407039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CD00B589D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CD00D8D5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CD00C4E140>]}
 [0m21:26:40.407865 [debug] [MainThread]: Flushing usage events
 [0m21:26:50.439383 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:34:37.341212 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027FC5DC0AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027FC82CFD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027FC82CF890>]}
+
+
+============================== 00:34:37.347381 | 9e897e66-83f8-4afd-aeb6-354636406e04 ==============================
+[0m00:34:37.347381 [info ] [MainThread]: Running with dbt=1.12.0
+[0m00:34:37.347907 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\phikh\\.dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt debug', 'log_path': 'C:\\Users\\phikh\\Desktop\\Assessment - Durban\\Game\\casino_games_models\\logs'}
+[0m00:34:37.375057 [info ] [MainThread]: dbt version: 1.12.0
+[0m00:34:37.375578 [info ] [MainThread]: python version: 3.13.9
+[0m00:34:37.376213 [info ] [MainThread]: python path: C:\Users\phikh\Desktop\Assessment - Durban\Game\dbt-env\Scripts\python.exe
+[0m00:34:37.376668 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m00:34:39.469099 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m00:34:39.469476 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m00:34:39.469713 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m00:34:39.663968 [info ] [MainThread]: Using profiles dir at C:\Users\phikh\.dbt
+[0m00:34:39.664596 [info ] [MainThread]: Using profiles.yml file at C:\Users\phikh\.dbt\profiles.yml
+[0m00:34:39.664895 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\dbt_project.yml
+[0m00:34:39.665615 [info ] [MainThread]: adapter type: snowflake
+[0m00:34:39.665926 [info ] [MainThread]: adapter version: 1.12.0
+[0m00:34:39.758465 [info ] [MainThread]: Configuration:
+[0m00:34:39.758963 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:34:39.759304 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:34:39.759600 [info ] [MainThread]: Required dependencies:
+[0m00:34:39.759856 [debug] [MainThread]: Executing "git --help"
+[0m00:34:39.808737 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:34:39.809674 [debug] [MainThread]: STDERR: "b''"
+[0m00:34:39.810341 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:34:39.811030 [info ] [MainThread]: Connection:
+[0m00:34:39.811747 [info ] [MainThread]:   account: CPARMEO-XQ80160
+[0m00:34:39.812265 [info ] [MainThread]:   user: phikhonamthembu
+[0m00:34:39.812657 [info ] [MainThread]:   database: CASINO_GAMES_DB
+[0m00:34:39.812963 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m00:34:39.813246 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m00:34:39.813589 [info ] [MainThread]:   schema: public
+[0m00:34:39.814008 [info ] [MainThread]:   authenticator: None
+[0m00:34:39.814359 [info ] [MainThread]:   oauth_client_id: None
+[0m00:34:39.814712 [info ] [MainThread]:   query_tag: None
+[0m00:34:39.815051 [info ] [MainThread]:   client_session_keep_alive: False
+[0m00:34:39.815422 [info ] [MainThread]:   host: None
+[0m00:34:39.815748 [info ] [MainThread]:   port: None
+[0m00:34:39.816081 [info ] [MainThread]:   proxy_host: None
+[0m00:34:39.816409 [info ] [MainThread]:   proxy_port: None
+[0m00:34:39.816801 [info ] [MainThread]:   protocol: None
+[0m00:34:39.817136 [info ] [MainThread]:   connect_retries: 1
+[0m00:34:39.817430 [info ] [MainThread]:   connect_timeout: None
+[0m00:34:39.817767 [info ] [MainThread]:   retry_on_database_errors: False
+[0m00:34:39.818053 [info ] [MainThread]:   retry_all: False
+[0m00:34:39.818405 [info ] [MainThread]:   insecure_mode: False
+[0m00:34:39.818850 [info ] [MainThread]:   reuse_connections: True
+[0m00:34:39.819220 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m00:34:39.819621 [info ] [MainThread]:   workload_identity_provider: None
+[0m00:34:39.820059 [info ] [MainThread]:   workload_identity_entra_resource: None
+[0m00:34:39.820469 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m00:34:39.821030 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m00:34:40.107585 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m00:34:40.109990 [debug] [MainThread]: Using snowflake connection "debug"
+[0m00:34:40.110330 [debug] [MainThread]: On debug: select 1 as id
+[0m00:34:40.110564 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:34:42.329454 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.218 seconds
+[0m00:34:42.331928 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m00:34:42.332849 [info ] [MainThread]: [32mAll checks passed![0m
+[0m00:34:42.334542 [debug] [MainThread]: Command `dbt debug` succeeded at 00:34:42.334241 after 5.18 seconds
+[0m00:34:42.335135 [debug] [MainThread]: Connection 'debug' was left open.
+[0m00:34:42.335599 [debug] [MainThread]: On debug: Close
+[0m00:34:43.045838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027FEA0FC8A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027FEA34D5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027FEA1FE140>]}
+[0m00:34:43.047004 [debug] [MainThread]: Flushing usage events
+[0m00:34:44.091226 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:34:53.593492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C02BF20AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C027C4D090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C02E47BB10>]}
+
+
+============================== 00:34:53.598240 | a74ff31c-6420-43b9-ac43-d60106c49185 ==============================
+[0m00:34:53.598240 [info ] [MainThread]: Running with dbt=1.12.0
+[0m00:34:53.598863 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\phikh\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run', 'log_path': 'C:\\Users\\phikh\\Desktop\\Assessment - Durban\\Game\\casino_games_models\\logs'}
+[0m00:34:54.739006 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m00:34:54.739397 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m00:34:54.739674 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m00:34:55.150027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a74ff31c-6420-43b9-ac43-d60106c49185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C02C3A6520>]}
+[0m00:34:55.206012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a74ff31c-6420-43b9-ac43-d60106c49185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0501BFBD0>]}
+[0m00:34:55.207081 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m00:34:55.433224 [debug] [MainThread]: checksum: 1a6b985475c43e53b2f98cbefdf6b1c7ac77b1831d8f6308313897c656dd32df, vars: {}, profile: casino_games_models, target: dev, version: 1.12.0
+[0m00:34:55.621938 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:34:55.622276 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m00:34:55.622479 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:34:55.630744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a74ff31c-6420-43b9-ac43-d60106c49185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0517FB950>]}
+[0m00:34:55.794257 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\manifest.json
+[0m00:34:55.797981 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\semantic_manifest.json
+[0m00:34:55.833172 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\osi_document.json
+[0m00:34:55.847144 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a74ff31c-6420-43b9-ac43-d60106c49185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0516BA6C0>]}
+[0m00:34:55.847584 [info ] [MainThread]: Found 8 models, 20 data tests, 3 seeds, 3 sources, 546 macros
+[0m00:34:55.848067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a74ff31c-6420-43b9-ac43-d60106c49185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C051969A90>]}
+[0m00:34:55.850356 [info ] [MainThread]: 
+[0m00:34:55.850766 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:34:55.851144 [info ] [MainThread]: 
+[0m00:34:55.851637 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m00:34:55.856529 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CASINO_GAMES_DB'
+[0m00:34:55.871980 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB"
+[0m00:34:55.872324 [debug] [ThreadPool]: On list_CASINO_GAMES_DB: show terse schemas in database CASINO_GAMES_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB"} */
+[0m00:34:55.872560 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:34:58.070828 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 2.198 seconds
+[0m00:34:58.075257 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB"
+[0m00:34:58.075693 [debug] [ThreadPool]: On list_CASINO_GAMES_DB: show terse schemas in database CASINO_GAMES_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB"} */
+[0m00:34:58.880593 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.804 seconds
+[0m00:34:58.883818 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB"
+[0m00:34:58.884310 [debug] [ThreadPool]: On list_CASINO_GAMES_DB: show terse schemas in database CASINO_GAMES_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB"} */
+[0m00:34:59.584784 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.700 seconds
+[0m00:34:59.591072 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CASINO_GAMES_DB_GOLD'
+[0m00:34:59.604596 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_GOLD"
+[0m00:34:59.604867 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_GOLD: show objects in CASINO_GAMES_DB.GOLD
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_GOLD"} */;
+[0m00:34:59.605079 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:35:01.550349 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.945 seconds
+[0m00:35:01.556502 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_GOLD"
+[0m00:35:01.557048 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_GOLD: show user functions in CASINO_GAMES_DB.GOLD
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_GOLD"} */
+[0m00:35:01.961997 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.404 seconds
+[0m00:35:01.966967 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CASINO_GAMES_DB_GOLD, now list_CASINO_GAMES_DB_SILVER)
+[0m00:35:01.970312 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_SILVER"
+[0m00:35:01.970911 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_SILVER: show objects in CASINO_GAMES_DB.SILVER
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_SILVER"} */;
+[0m00:35:02.403736 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.432 seconds
+[0m00:35:02.406585 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_SILVER"
+[0m00:35:02.406895 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_SILVER: show user functions in CASINO_GAMES_DB.SILVER
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_SILVER"} */
+[0m00:35:02.875312 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.468 seconds
+[0m00:35:02.879583 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CASINO_GAMES_DB_SILVER, now list_CASINO_GAMES_DB_public)
+[0m00:35:02.882327 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_public"
+[0m00:35:02.884060 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_public: show objects in CASINO_GAMES_DB.public
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_public"} */;
+[0m00:35:03.297154 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.412 seconds
+[0m00:35:03.301672 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_public"
+[0m00:35:03.302337 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_public: show user functions in CASINO_GAMES_DB.public
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_public"} */
+[0m00:35:03.665092 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.362 seconds
+[0m00:35:03.669329 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CASINO_GAMES_DB_public, now list_CASINO_GAMES_DB_BRONZE)
+[0m00:35:03.672155 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_BRONZE"
+[0m00:35:03.672818 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_BRONZE: show objects in CASINO_GAMES_DB.BRONZE
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_BRONZE"} */;
+[0m00:35:04.068985 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.395 seconds
+[0m00:35:04.074880 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_BRONZE"
+[0m00:35:04.075595 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_BRONZE: show user functions in CASINO_GAMES_DB.BRONZE
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_BRONZE"} */
+[0m00:35:04.425481 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.349 seconds
+[0m00:35:04.431533 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a74ff31c-6420-43b9-ac43-d60106c49185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C051B81CC0>]}
+[0m00:35:04.439832 [debug] [Thread-2 (]: Began running node model.casino_games_models.br_dim_currency
+[0m00:35:04.440597 [info ] [Thread-2 (]: 1 of 8 START sql view model BRONZE.br_dim_currency ............................. [RUN]
+[0m00:35:04.441820 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.casino_games_models.br_dim_currency'
+[0m00:35:04.442770 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.br_dim_currency
+[0m00:35:04.449525 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.br_dim_currency"
+[0m00:35:04.450900 [debug] [Thread-2 (]: Began executing node model.casino_games_models.br_dim_currency
+[0m00:35:04.476833 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.br_dim_currency"
+[0m00:35:04.478818 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.br_dim_currency"
+[0m00:35:04.479194 [debug] [Thread-2 (]: On model.casino_games_models.br_dim_currency: create or replace   view CASINO_GAMES_DB.BRONZE.br_dim_currency
+  
+  
+  
+  
+  as (
+    SELECT  *
+FROM    CASINO_GAMES_DB.RAW.raw_dim_currency
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.br_dim_currency"} */;
+[0m00:35:04.479462 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m00:35:06.252255 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.772 seconds
+[0m00:35:06.283886 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a74ff31c-6420-43b9-ac43-d60106c49185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C051C71790>]}
+[0m00:35:06.284423 [info ] [Thread-2 (]: 1 of 8 OK created sql view model BRONZE.br_dim_currency ........................ [[32mSUCCESS 1[0m in 1.84s]
+[0m00:35:06.285099 [debug] [Thread-2 (]: Finished running node model.casino_games_models.br_dim_currency
+[0m00:35:06.285410 [debug] [Thread-2 (]: Began running node model.casino_games_models.br_dim_game
+[0m00:35:06.285939 [info ] [Thread-2 (]: 2 of 8 START sql view model BRONZE.br_dim_game ................................. [RUN]
+[0m00:35:06.286491 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.casino_games_models.br_dim_currency, now model.casino_games_models.br_dim_game)
+[0m00:35:06.286757 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.br_dim_game
+[0m00:35:06.288066 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.br_dim_game"
+[0m00:35:06.289154 [debug] [Thread-2 (]: Began executing node model.casino_games_models.br_dim_game
+[0m00:35:06.290554 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.br_dim_game"
+[0m00:35:06.291401 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.br_dim_game"
+[0m00:35:06.291692 [debug] [Thread-2 (]: On model.casino_games_models.br_dim_game: create or replace   view CASINO_GAMES_DB.BRONZE.br_dim_game
+  
+  
+  
+  
+  as (
+    SELECT  *
+FROM    CASINO_GAMES_DB.RAW.raw_dim_game
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.br_dim_game"} */;
+[0m00:35:06.965333 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.673 seconds
+[0m00:35:06.971089 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a74ff31c-6420-43b9-ac43-d60106c49185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C04FE02F10>]}
+[0m00:35:06.972519 [info ] [Thread-2 (]: 2 of 8 OK created sql view model BRONZE.br_dim_game ............................ [[32mSUCCESS 1[0m in 0.68s]
+[0m00:35:06.974015 [debug] [Thread-2 (]: Finished running node model.casino_games_models.br_dim_game
+[0m00:35:06.974683 [debug] [Thread-2 (]: Began running node model.casino_games_models.br_fact_activity
+[0m00:35:06.975380 [info ] [Thread-2 (]: 3 of 8 START sql view model BRONZE.br_fact_activity ............................ [RUN]
+[0m00:35:06.976402 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.casino_games_models.br_dim_game, now model.casino_games_models.br_fact_activity)
+[0m00:35:06.977397 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.br_fact_activity
+[0m00:35:06.980813 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.br_fact_activity"
+[0m00:35:06.982482 [debug] [Thread-2 (]: Began executing node model.casino_games_models.br_fact_activity
+[0m00:35:06.984565 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.br_fact_activity"
+[0m00:35:06.985595 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.br_fact_activity"
+[0m00:35:06.985933 [debug] [Thread-2 (]: On model.casino_games_models.br_fact_activity: create or replace   view CASINO_GAMES_DB.BRONZE.br_fact_activity
+  
+  
+  
+  
+  as (
+    SELECT  *
+FROM    CASINO_GAMES_DB.RAW.raw_fact_activity
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.br_fact_activity"} */;
+[0m00:35:07.657241 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.670 seconds
+[0m00:35:07.662909 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a74ff31c-6420-43b9-ac43-d60106c49185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C051D12B70>]}
+[0m00:35:07.664216 [info ] [Thread-2 (]: 3 of 8 OK created sql view model BRONZE.br_fact_activity ....................... [[32mSUCCESS 1[0m in 0.69s]
+[0m00:35:07.665730 [debug] [Thread-2 (]: Finished running node model.casino_games_models.br_fact_activity
+[0m00:35:07.666405 [debug] [Thread-2 (]: Began running node model.casino_games_models.slv_dim_currency
+[0m00:35:07.667541 [info ] [Thread-2 (]: 4 of 8 START sql view model SILVER.slv_dim_currency ............................ [RUN]
+[0m00:35:07.668746 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.casino_games_models.br_fact_activity, now model.casino_games_models.slv_dim_currency)
+[0m00:35:07.669401 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.slv_dim_currency
+[0m00:35:07.672443 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.slv_dim_currency"
+[0m00:35:07.674399 [debug] [Thread-2 (]: Began executing node model.casino_games_models.slv_dim_currency
+[0m00:35:07.677192 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.slv_dim_currency"
+[0m00:35:07.678640 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.slv_dim_currency"
+[0m00:35:07.679131 [debug] [Thread-2 (]: On model.casino_games_models.slv_dim_currency: create or replace   view CASINO_GAMES_DB.SILVER.slv_dim_currency
+  
+  
+  
+  
+  as (
+    with dim_currency as (
+    select * from CASINO_GAMES_DB.BRONZE.br_dim_currency
+)
+select 
+        CURRENCYID as currency_id, 
+        cast(EXCHANGE_RATE_TO_BASE as float) as currency_rate
+from    dim_currency
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.slv_dim_currency"} */;
+[0m00:35:08.293356 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.614 seconds
+[0m00:35:08.295458 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a74ff31c-6420-43b9-ac43-d60106c49185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C051D8B7D0>]}
+[0m00:35:08.296093 [info ] [Thread-2 (]: 4 of 8 OK created sql view model SILVER.slv_dim_currency ....................... [[32mSUCCESS 1[0m in 0.63s]
+[0m00:35:08.296824 [debug] [Thread-2 (]: Finished running node model.casino_games_models.slv_dim_currency
+[0m00:35:08.297188 [debug] [Thread-2 (]: Began running node model.casino_games_models.slv_dim_game
+[0m00:35:08.297618 [info ] [Thread-2 (]: 5 of 8 START sql view model SILVER.slv_dim_game ................................ [RUN]
+[0m00:35:08.298132 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.casino_games_models.slv_dim_currency, now model.casino_games_models.slv_dim_game)
+[0m00:35:08.298426 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.slv_dim_game
+[0m00:35:08.299983 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.slv_dim_game"
+[0m00:35:08.300906 [debug] [Thread-2 (]: Began executing node model.casino_games_models.slv_dim_game
+[0m00:35:08.302770 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.slv_dim_game"
+[0m00:35:08.303652 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.slv_dim_game"
+[0m00:35:08.303984 [debug] [Thread-2 (]: On model.casino_games_models.slv_dim_game: create or replace   view CASINO_GAMES_DB.SILVER.slv_dim_game
+  
+  
+  
+  
+  as (
+    with dim_game as(
+    select * from CASINO_GAMES_DB.BRONZE.br_dim_game
+)
+select  
+        GAMEID as game_id ,
+        GAMETYPE as game_type, 
+        parse_json(THEMES) as themes, 
+        parse_json(MECHANICS) as mechanics
+from    dim_game
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.slv_dim_game"} */;
+[0m00:35:09.140302 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.836 seconds
+[0m00:35:09.143987 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a74ff31c-6420-43b9-ac43-d60106c49185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C051D1D550>]}
+[0m00:35:09.144723 [info ] [Thread-2 (]: 5 of 8 OK created sql view model SILVER.slv_dim_game ........................... [[32mSUCCESS 1[0m in 0.85s]
+[0m00:35:09.145571 [debug] [Thread-2 (]: Finished running node model.casino_games_models.slv_dim_game
+[0m00:35:09.145986 [debug] [Thread-2 (]: Began running node model.casino_games_models.slv_fact_activity
+[0m00:35:09.146437 [info ] [Thread-2 (]: 6 of 8 START sql view model SILVER.slv_fact_activity ........................... [RUN]
+[0m00:35:09.147089 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.casino_games_models.slv_dim_game, now model.casino_games_models.slv_fact_activity)
+[0m00:35:09.147539 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.slv_fact_activity
+[0m00:35:09.149313 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.slv_fact_activity"
+[0m00:35:09.151129 [debug] [Thread-2 (]: Began executing node model.casino_games_models.slv_fact_activity
+[0m00:35:09.153106 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.slv_fact_activity"
+[0m00:35:09.154716 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.slv_fact_activity"
+[0m00:35:09.155059 [debug] [Thread-2 (]: On model.casino_games_models.slv_fact_activity: create or replace   view CASINO_GAMES_DB.SILVER.slv_fact_activity
+  
+  
+  
+  
+  as (
+    with slv_fact_activity as (
+    select * from CASINO_GAMES_DB.BRONZE.br_fact_activity
+
+)
+select  
+        
+        CASINOID as casino_id,
+        PLAYERID as player_id,
+        GAMEID as game_id,
+        CURRENCYID as currency_id, 
+
+        -- handling transformation of financial data
+        cast(TOTALWAGER as float) as total_wager, 
+        cast(TOTALPAYOUT as float) as total_payout,
+        cast(TOTALSPINS as integer) as total_spins,
+        
+        -- converting dates  
+        coalesce(
+        try_to_date(trim(replace(GOLIVE_DATE, '"', '')), 'YYYY/MM/DD'),
+        try_to_date(trim(replace(GOLIVE_DATE, '"', '')), 'YYYY-MM-DD')
+    ) as golive_date,
+        coalesce(
+        try_to_date(trim(replace(date, '"', '')), 'YYYY/MM/DD'),
+        try_to_date(trim(replace(date, '"', '')), 'YYYY-MM-DD')
+    ) as activity_date
+from    slv_fact_activity
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.slv_fact_activity"} */;
+[0m00:35:09.890051 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.734 seconds
+[0m00:35:09.895807 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a74ff31c-6420-43b9-ac43-d60106c49185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C051D774D0>]}
+[0m00:35:09.896906 [info ] [Thread-2 (]: 6 of 8 OK created sql view model SILVER.slv_fact_activity ...................... [[32mSUCCESS 1[0m in 0.75s]
+[0m00:35:09.897926 [debug] [Thread-2 (]: Finished running node model.casino_games_models.slv_fact_activity
+[0m00:35:09.898464 [debug] [Thread-2 (]: Began running node model.casino_games_models.gl_game
+[0m00:35:09.899215 [info ] [Thread-2 (]: 7 of 8 START sql table model GOLD.gl_game ...................................... [RUN]
+[0m00:35:09.899990 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.casino_games_models.slv_fact_activity, now model.casino_games_models.gl_game)
+[0m00:35:09.900389 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.gl_game
+[0m00:35:09.902317 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.gl_game"
+[0m00:35:09.903456 [debug] [Thread-2 (]: Began executing node model.casino_games_models.gl_game
+[0m00:35:09.924911 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.gl_game"
+[0m00:35:09.927012 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.gl_game"
+[0m00:35:09.927401 [debug] [Thread-2 (]: On model.casino_games_models.gl_game: create or replace transient table CASINO_GAMES_DB.GOLD.gl_game
+    
+    
+    
+    
+    
+
+    as (with game as (
+    select * from CASINO_GAMES_DB.SILVER.slv_dim_game
+
+)
+select * from game
+    )
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.gl_game"} */;
+[0m00:35:13.657262 [debug] [Thread-2 (]: SQL status: SUCCESS 12413 in 3.729 seconds
+[0m00:35:13.661333 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a74ff31c-6420-43b9-ac43-d60106c49185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C051D76450>]}
+[0m00:35:13.662319 [info ] [Thread-2 (]: 7 of 8 OK created sql table model GOLD.gl_game ................................. [[32mSUCCESS 12413[0m in 3.76s]
+[0m00:35:13.663631 [debug] [Thread-2 (]: Finished running node model.casino_games_models.gl_game
+[0m00:35:13.664891 [debug] [Thread-2 (]: Began running node model.casino_games_models.gl_activity
+[0m00:35:13.665822 [info ] [Thread-2 (]: 8 of 8 START sql table model GOLD.gl_activity .................................. [RUN]
+[0m00:35:13.667933 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.casino_games_models.gl_game, now model.casino_games_models.gl_activity)
+[0m00:35:13.671127 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.gl_activity
+[0m00:35:13.676503 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.gl_activity"
+[0m00:35:13.678881 [debug] [Thread-2 (]: Began executing node model.casino_games_models.gl_activity
+[0m00:35:13.686326 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.gl_activity"
+[0m00:35:13.692407 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.gl_activity"
+[0m00:35:13.694196 [debug] [Thread-2 (]: On model.casino_games_models.gl_activity: create or replace transient table CASINO_GAMES_DB.GOLD.gl_activity
+    
+    
+    
+    
+    
+
+    as (with currency as (
+    select * from CASINO_GAMES_DB.SILVER.slv_dim_currency
+),
+activity as (
+    select * from CASINO_GAMES_DB.SILVER.slv_fact_activity
+)
+
+select  
+        act.activity_date, 
+        act.casino_id, 
+        act.player_id, 
+        act.game_id, 
+        act.currency_id,
+        act.total_spins, 
+        act.golive_date,
+        act.total_wager * cur.currency_rate as total_wager_rated, -- converting to provided rates
+        act.total_payout * cur.currency_rate as total_payout,   -- converting to provided rates
+        (act.total_wager * cur.currency_rate) - act.total_payout * cur.currency_rate as net_wins -- calculating total wins
+
+from    activity act
+left outer join 
+        currency cur
+on      act.currency_id =  cur.currency_id
+    )
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.gl_activity"} */;
+[0m00:35:17.936655 [debug] [Thread-2 (]: SQL status: SUCCESS 973831 in 4.241 seconds
+[0m00:35:17.955117 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.gl_activity"
+[0m00:35:17.955740 [debug] [Thread-2 (]: On model.casino_games_models.gl_activity: comment on table CASINO_GAMES_DB.GOLD.gl_activity IS $$this model contains daily casino activity$$
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.gl_activity"} */;
+[0m00:35:18.331738 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.375 seconds
+[0m00:35:18.355148 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.gl_activity"
+[0m00:35:18.356128 [debug] [Thread-2 (]: On model.casino_games_models.gl_activity: describe table CASINO_GAMES_DB.GOLD.gl_activity
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.gl_activity"} */
+[0m00:35:18.729242 [debug] [Thread-2 (]: SQL status: SUCCESS 10 in 0.372 seconds
+[0m00:35:18.757723 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.gl_activity"
+[0m00:35:18.758137 [debug] [Thread-2 (]: On model.casino_games_models.gl_activity: alter  table CASINO_GAMES_DB.GOLD.gl_activity alter
+    
+        "ACTIVITY_DATE" COMMENT $$$$,
+    
+        "CASINO_ID" COMMENT $$$$,
+    
+        "PLAYER_ID" COMMENT $$$$,
+    
+        "GAME_ID" COMMENT $$$$,
+    
+        "CURRENCY_ID" COMMENT $$$$,
+    
+        "TOTAL_SPINS" COMMENT $$$$,
+    
+        "GOLIVE_DATE" COMMENT $$$$,
+    
+        "TOTAL_WAGER_RATED" COMMENT $$$$,
+    
+        "TOTAL_PAYOUT" COMMENT $$$$,
+    
+        "NET_WINS" COMMENT $$$$
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.gl_activity"} */;
+[0m00:35:19.164124 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.405 seconds
+[0m00:35:19.168780 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a74ff31c-6420-43b9-ac43-d60106c49185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C051D9A030>]}
+[0m00:35:19.171580 [info ] [Thread-2 (]: 8 of 8 OK created sql table model GOLD.gl_activity ............................. [[32mSUCCESS 973831[0m in 5.50s]
+[0m00:35:19.174225 [debug] [Thread-2 (]: Finished running node model.casino_games_models.gl_activity
+[0m00:35:19.178344 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:35:19.179261 [debug] [MainThread]: Connection 'list_CASINO_GAMES_DB' was left open.
+[0m00:35:19.180100 [debug] [MainThread]: On list_CASINO_GAMES_DB: Close
+[0m00:35:19.849741 [debug] [MainThread]: Connection 'list_CASINO_GAMES_DB_BRONZE' was left open.
+[0m00:35:19.851434 [debug] [MainThread]: On list_CASINO_GAMES_DB_BRONZE: Close
+[0m00:35:20.486919 [debug] [MainThread]: Connection 'model.casino_games_models.gl_activity' was left open.
+[0m00:35:20.487916 [debug] [MainThread]: On model.casino_games_models.gl_activity: Close
+[0m00:35:21.115244 [info ] [MainThread]: 
+[0m00:35:21.117575 [info ] [MainThread]: Finished running 2 table models, 6 view models in 0 hours 0 minutes and 25.26 seconds (25.26s).
+[0m00:35:21.125081 [debug] [MainThread]: Command end result
+[0m00:35:21.274607 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\manifest.json
+[0m00:35:21.284788 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\semantic_manifest.json
+[0m00:35:21.294209 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\osi_document.json
+[0m00:35:21.314602 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\run_results.json
+[0m00:35:21.315775 [info ] [MainThread]: 
+[0m00:35:21.317043 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:35:21.318157 [info ] [MainThread]: 
+[0m00:35:21.319287 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=8
+[0m00:35:21.321409 [debug] [MainThread]: Command `dbt run` succeeded at 00:35:21.321128 after 27.87 seconds
+[0m00:35:21.322272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C0298AB950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C02E4869F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C051D99370>]}
+[0m00:35:21.323155 [debug] [MainThread]: Flushing usage events
+[0m00:35:22.609909 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:36:19.374338 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CCF1DA0AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CCEDA8D090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CCF42FFB10>]}
+
+
+============================== 00:36:19.378484 | 72e9668a-a7b9-4625-8ea9-ce81bc07cb60 ==============================
+[0m00:36:19.378484 [info ] [MainThread]: Running with dbt=1.12.0
+[0m00:36:19.379131 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\phikh\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt test', 'log_path': 'C:\\Users\\phikh\\Desktop\\Assessment - Durban\\Game\\casino_games_models\\logs'}
+[0m00:36:20.249414 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m00:36:20.249808 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m00:36:20.250060 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m00:36:20.517303 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '72e9668a-a7b9-4625-8ea9-ce81bc07cb60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CCF2226520>]}
+[0m00:36:20.570991 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '72e9668a-a7b9-4625-8ea9-ce81bc07cb60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC960EFBD0>]}
+[0m00:36:20.571885 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m00:36:20.780467 [debug] [MainThread]: checksum: 1a6b985475c43e53b2f98cbefdf6b1c7ac77b1831d8f6308313897c656dd32df, vars: {}, profile: casino_games_models, target: dev, version: 1.12.0
+[0m00:36:20.946612 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:36:20.947069 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m00:36:20.947363 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:36:20.954981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '72e9668a-a7b9-4625-8ea9-ce81bc07cb60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC9675F950>]}
+[0m00:36:21.107513 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\manifest.json
+[0m00:36:21.110454 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\semantic_manifest.json
+[0m00:36:21.131945 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\osi_document.json
+[0m00:36:21.154771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '72e9668a-a7b9-4625-8ea9-ce81bc07cb60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC9781DA90>]}
+[0m00:36:21.155193 [info ] [MainThread]: Found 8 models, 20 data tests, 3 seeds, 3 sources, 546 macros
+[0m00:36:21.155824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '72e9668a-a7b9-4625-8ea9-ce81bc07cb60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC978F9C50>]}
+[0m00:36:21.158213 [info ] [MainThread]: 
+[0m00:36:21.158751 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:36:21.159157 [info ] [MainThread]: 
+[0m00:36:21.159704 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m00:36:21.164747 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CASINO_GAMES_DB_GOLD'
+[0m00:36:21.183478 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_GOLD"
+[0m00:36:21.183809 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_GOLD: show objects in CASINO_GAMES_DB.GOLD
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_GOLD"} */;
+[0m00:36:21.184069 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:36:23.187995 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.004 seconds
+[0m00:36:23.198343 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_GOLD"
+[0m00:36:23.198722 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_GOLD: show user functions in CASINO_GAMES_DB.GOLD
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_GOLD"} */
+[0m00:36:23.591970 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.392 seconds
+[0m00:36:23.596115 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CASINO_GAMES_DB_GOLD, now list_CASINO_GAMES_DB_public)
+[0m00:36:23.598977 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_public"
+[0m00:36:23.599676 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_public: show objects in CASINO_GAMES_DB.public
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_public"} */;
+[0m00:36:23.985023 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.385 seconds
+[0m00:36:23.988442 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_public"
+[0m00:36:23.988729 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_public: show user functions in CASINO_GAMES_DB.public
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_public"} */
+[0m00:36:24.347558 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.358 seconds
+[0m00:36:24.350948 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CASINO_GAMES_DB_public, now list_CASINO_GAMES_DB_SILVER)
+[0m00:36:24.353648 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_SILVER"
+[0m00:36:24.354298 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_SILVER: show objects in CASINO_GAMES_DB.SILVER
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_SILVER"} */;
+[0m00:36:24.799538 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.445 seconds
+[0m00:36:24.802552 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_SILVER"
+[0m00:36:24.802906 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_SILVER: show user functions in CASINO_GAMES_DB.SILVER
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_SILVER"} */
+[0m00:36:25.212630 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.409 seconds
+[0m00:36:25.221892 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CASINO_GAMES_DB_SILVER, now list_CASINO_GAMES_DB_BRONZE)
+[0m00:36:25.225388 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_BRONZE"
+[0m00:36:25.225932 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_BRONZE: show objects in CASINO_GAMES_DB.BRONZE
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_BRONZE"} */;
+[0m00:36:25.627967 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.402 seconds
+[0m00:36:25.633265 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_BRONZE"
+[0m00:36:25.634043 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_BRONZE: show user functions in CASINO_GAMES_DB.BRONZE
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_BRONZE"} */
+[0m00:36:25.995955 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.361 seconds
+[0m00:36:25.999084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '72e9668a-a7b9-4625-8ea9-ce81bc07cb60', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC97996680>]}
+[0m00:36:26.002290 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_gl_activity_activity_date.af25794d10
+[0m00:36:26.002729 [info ] [Thread-2 (]: 1 of 20 START test not_null_gl_activity_activity_date .......................... [RUN]
+[0m00:36:26.003393 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.casino_games_models.not_null_gl_activity_activity_date.af25794d10'
+[0m00:36:26.003668 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_gl_activity_activity_date.af25794d10
+[0m00:36:26.018140 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_gl_activity_activity_date.af25794d10"
+[0m00:36:26.019279 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_gl_activity_activity_date.af25794d10
+[0m00:36:26.036352 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_gl_activity_activity_date.af25794d10"
+[0m00:36:26.038192 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_gl_activity_activity_date.af25794d10"
+[0m00:36:26.038595 [debug] [Thread-2 (]: On test.casino_games_models.not_null_gl_activity_activity_date.af25794d10: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select activity_date
+from CASINO_GAMES_DB.GOLD.gl_activity
+where activity_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_gl_activity_activity_date.af25794d10"} */
+[0m00:36:26.038931 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m00:36:27.832055 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.793 seconds
+[0m00:36:27.851688 [info ] [Thread-2 (]: 1 of 20 PASS not_null_gl_activity_activity_date ................................ [[32mPASS[0m in 1.85s]
+[0m00:36:27.852641 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_gl_activity_activity_date.af25794d10
+[0m00:36:27.853079 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012
+[0m00:36:27.853585 [info ] [Thread-2 (]: 2 of 20 START test not_null_gl_activity_casino_id .............................. [RUN]
+[0m00:36:27.854276 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_gl_activity_activity_date.af25794d10, now test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012)
+[0m00:36:27.854705 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012
+[0m00:36:27.862551 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012"
+[0m00:36:27.863780 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012
+[0m00:36:27.865499 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012"
+[0m00:36:27.866963 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012"
+[0m00:36:27.867292 [debug] [Thread-2 (]: On test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select casino_id
+from CASINO_GAMES_DB.GOLD.gl_activity
+where casino_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012"} */
+[0m00:36:28.547446 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.680 seconds
+[0m00:36:28.550339 [info ] [Thread-2 (]: 2 of 20 PASS not_null_gl_activity_casino_id .................................... [[32mPASS[0m in 0.70s]
+[0m00:36:28.551178 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012
+[0m00:36:28.551602 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7
+[0m00:36:28.552089 [info ] [Thread-2 (]: 3 of 20 START test not_null_gl_activity_currency_id ............................ [RUN]
+[0m00:36:28.552640 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012, now test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7)
+[0m00:36:28.552977 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7
+[0m00:36:28.559215 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7"
+[0m00:36:28.560612 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7
+[0m00:36:28.561921 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7"
+[0m00:36:28.563382 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7"
+[0m00:36:28.563693 [debug] [Thread-2 (]: On test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select currency_id
+from CASINO_GAMES_DB.GOLD.gl_activity
+where currency_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7"} */
+[0m00:36:28.916161 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.352 seconds
+[0m00:36:28.917968 [info ] [Thread-2 (]: 3 of 20 PASS not_null_gl_activity_currency_id .................................. [[32mPASS[0m in 0.37s]
+[0m00:36:28.918530 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7
+[0m00:36:28.918819 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2
+[0m00:36:28.919146 [info ] [Thread-2 (]: 4 of 20 START test not_null_gl_activity_game_id ................................ [RUN]
+[0m00:36:28.919561 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7, now test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2)
+[0m00:36:28.919906 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2
+[0m00:36:28.925278 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2"
+[0m00:36:28.926242 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2
+[0m00:36:28.927527 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2"
+[0m00:36:28.928632 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2"
+[0m00:36:28.928931 [debug] [Thread-2 (]: On test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select game_id
+from CASINO_GAMES_DB.GOLD.gl_activity
+where game_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2"} */
+[0m00:36:29.352400 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.423 seconds
+[0m00:36:29.356538 [info ] [Thread-2 (]: 4 of 20 PASS not_null_gl_activity_game_id ...................................... [[32mPASS[0m in 0.44s]
+[0m00:36:29.358200 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2
+[0m00:36:29.358727 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_gl_activity_golive_date.00569d579d
+[0m00:36:29.359184 [info ] [Thread-2 (]: 5 of 20 START test not_null_gl_activity_golive_date ............................ [RUN]
+[0m00:36:29.359909 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2, now test.casino_games_models.not_null_gl_activity_golive_date.00569d579d)
+[0m00:36:29.360331 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_gl_activity_golive_date.00569d579d
+[0m00:36:29.367912 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_gl_activity_golive_date.00569d579d"
+[0m00:36:29.369517 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_gl_activity_golive_date.00569d579d
+[0m00:36:29.371141 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_gl_activity_golive_date.00569d579d"
+[0m00:36:29.372354 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_gl_activity_golive_date.00569d579d"
+[0m00:36:29.372675 [debug] [Thread-2 (]: On test.casino_games_models.not_null_gl_activity_golive_date.00569d579d: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select golive_date
+from CASINO_GAMES_DB.GOLD.gl_activity
+where golive_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_gl_activity_golive_date.00569d579d"} */
+[0m00:36:29.752940 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.380 seconds
+[0m00:36:29.756988 [info ] [Thread-2 (]: 5 of 20 PASS not_null_gl_activity_golive_date .................................. [[32mPASS[0m in 0.40s]
+[0m00:36:29.758554 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_gl_activity_golive_date.00569d579d
+[0m00:36:29.759243 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034
+[0m00:36:29.759915 [info ] [Thread-2 (]: 6 of 20 START test not_null_gl_activity_player_id .............................. [RUN]
+[0m00:36:29.760977 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_gl_activity_golive_date.00569d579d, now test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034)
+[0m00:36:29.761587 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034
+[0m00:36:29.770777 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034"
+[0m00:36:29.772150 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034
+[0m00:36:29.773715 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034"
+[0m00:36:29.775501 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034"
+[0m00:36:29.775843 [debug] [Thread-2 (]: On test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select player_id
+from CASINO_GAMES_DB.GOLD.gl_activity
+where player_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034"} */
+[0m00:36:30.197537 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.421 seconds
+[0m00:36:30.200640 [info ] [Thread-2 (]: 6 of 20 PASS not_null_gl_activity_player_id .................................... [[32mPASS[0m in 0.44s]
+[0m00:36:30.201559 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034
+[0m00:36:30.202098 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad
+[0m00:36:30.202681 [info ] [Thread-2 (]: 7 of 20 START test not_null_gl_activity_total_spins ............................ [RUN]
+[0m00:36:30.203369 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034, now test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad)
+[0m00:36:30.203767 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad
+[0m00:36:30.209158 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad"
+[0m00:36:30.209897 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad
+[0m00:36:30.211170 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad"
+[0m00:36:30.212042 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad"
+[0m00:36:30.212341 [debug] [Thread-2 (]: On test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select total_spins
+from CASINO_GAMES_DB.GOLD.gl_activity
+where total_spins is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad"} */
+[0m00:36:30.625702 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.413 seconds
+[0m00:36:30.629632 [info ] [Thread-2 (]: 7 of 20 PASS not_null_gl_activity_total_spins .................................. [[32mPASS[0m in 0.43s]
+[0m00:36:30.631292 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad
+[0m00:36:30.632185 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64
+[0m00:36:30.633185 [info ] [Thread-2 (]: 8 of 20 START test not_null_slv_dim_game_game_id ............................... [RUN]
+[0m00:36:30.634243 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad, now test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64)
+[0m00:36:30.635114 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64
+[0m00:36:30.642803 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64"
+[0m00:36:30.643873 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64
+[0m00:36:30.645142 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64"
+[0m00:36:30.646523 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64"
+[0m00:36:30.646929 [debug] [Thread-2 (]: On test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select game_id
+from CASINO_GAMES_DB.SILVER.slv_dim_game
+where game_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64"} */
+[0m00:36:31.148228 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.501 seconds
+[0m00:36:31.152720 [info ] [Thread-2 (]: 8 of 20 PASS not_null_slv_dim_game_game_id ..................................... [[32mPASS[0m in 0.52s]
+[0m00:36:31.154638 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64
+[0m00:36:31.155400 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d
+[0m00:36:31.156033 [info ] [Thread-2 (]: 9 of 20 START test not_null_slv_dim_game_game_type ............................. [RUN]
+[0m00:36:31.157426 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64, now test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d)
+[0m00:36:31.158038 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d
+[0m00:36:31.167092 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d"
+[0m00:36:31.172556 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d
+[0m00:36:31.174936 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d"
+[0m00:36:31.176380 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d"
+[0m00:36:31.176716 [debug] [Thread-2 (]: On test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select game_type
+from CASINO_GAMES_DB.SILVER.slv_dim_game
+where game_type is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d"} */
+[0m00:36:31.719441 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.542 seconds
+[0m00:36:31.723516 [info ] [Thread-2 (]: 9 of 20 PASS not_null_slv_dim_game_game_type ................................... [[32mPASS[0m in 0.57s]
+[0m00:36:31.725114 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d
+[0m00:36:31.726060 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe
+[0m00:36:31.726866 [info ] [Thread-2 (]: 10 of 20 START test not_null_slv_fact_activity_casino_id ....................... [RUN]
+[0m00:36:31.728093 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d, now test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe)
+[0m00:36:31.728610 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe
+[0m00:36:31.735342 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe"
+[0m00:36:31.736578 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe
+[0m00:36:31.738104 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe"
+[0m00:36:31.739182 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe"
+[0m00:36:31.739484 [debug] [Thread-2 (]: On test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select casino_id
+from CASINO_GAMES_DB.SILVER.slv_fact_activity
+where casino_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe"} */
+[0m00:36:32.271402 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.531 seconds
+[0m00:36:32.273364 [info ] [Thread-2 (]: 10 of 20 PASS not_null_slv_fact_activity_casino_id ............................. [[32mPASS[0m in 0.55s]
+[0m00:36:32.274254 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe
+[0m00:36:32.274677 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712
+[0m00:36:32.275237 [info ] [Thread-2 (]: 11 of 20 START test not_null_slv_fact_activity_currency_id ..................... [RUN]
+[0m00:36:32.276324 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe, now test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712)
+[0m00:36:32.276670 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712
+[0m00:36:32.282288 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712"
+[0m00:36:32.283466 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712
+[0m00:36:32.284838 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712"
+[0m00:36:32.286173 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712"
+[0m00:36:32.286491 [debug] [Thread-2 (]: On test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select currency_id
+from CASINO_GAMES_DB.SILVER.slv_fact_activity
+where currency_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712"} */
+[0m00:36:32.823095 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.536 seconds
+[0m00:36:32.825212 [info ] [Thread-2 (]: 11 of 20 PASS not_null_slv_fact_activity_currency_id ........................... [[32mPASS[0m in 0.55s]
+[0m00:36:32.825876 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712
+[0m00:36:32.826215 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4
+[0m00:36:32.826636 [info ] [Thread-2 (]: 12 of 20 START test not_null_slv_fact_activity_game_id ......................... [RUN]
+[0m00:36:32.827245 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712, now test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4)
+[0m00:36:32.827528 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4
+[0m00:36:32.832594 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4"
+[0m00:36:32.833732 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4
+[0m00:36:32.834942 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4"
+[0m00:36:32.836031 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4"
+[0m00:36:32.836371 [debug] [Thread-2 (]: On test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select game_id
+from CASINO_GAMES_DB.SILVER.slv_fact_activity
+where game_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4"} */
+[0m00:36:33.401625 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.564 seconds
+[0m00:36:33.406151 [info ] [Thread-2 (]: 12 of 20 PASS not_null_slv_fact_activity_game_id ............................... [[32mPASS[0m in 0.58s]
+[0m00:36:33.407951 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4
+[0m00:36:33.408720 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457
+[0m00:36:33.409629 [info ] [Thread-2 (]: 13 of 20 START test not_null_slv_fact_activity_player_id ....................... [RUN]
+[0m00:36:33.410718 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4, now test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457)
+[0m00:36:33.411408 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457
+[0m00:36:33.419725 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457"
+[0m00:36:33.422363 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457
+[0m00:36:33.424037 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457"
+[0m00:36:33.425460 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457"
+[0m00:36:33.425856 [debug] [Thread-2 (]: On test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select player_id
+from CASINO_GAMES_DB.SILVER.slv_fact_activity
+where player_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457"} */
+[0m00:36:33.815877 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.390 seconds
+[0m00:36:33.818390 [info ] [Thread-2 (]: 13 of 20 PASS not_null_slv_fact_activity_player_id ............................. [[32mPASS[0m in 0.41s]
+[0m00:36:33.819138 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457
+[0m00:36:33.819558 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d
+[0m00:36:33.819930 [info ] [Thread-2 (]: 14 of 20 START test not_null_slv_fact_activity_total_spins ..................... [RUN]
+[0m00:36:33.820519 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457, now test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d)
+[0m00:36:33.820861 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d
+[0m00:36:33.827732 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d"
+[0m00:36:33.829266 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d
+[0m00:36:33.830856 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d"
+[0m00:36:33.832770 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d"
+[0m00:36:33.833069 [debug] [Thread-2 (]: On test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select total_spins
+from CASINO_GAMES_DB.SILVER.slv_fact_activity
+where total_spins is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d"} */
+[0m00:36:34.231217 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.398 seconds
+[0m00:36:34.234927 [info ] [Thread-2 (]: 14 of 20 PASS not_null_slv_fact_activity_total_spins ........................... [[32mPASS[0m in 0.41s]
+[0m00:36:34.236887 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d
+[0m00:36:34.237706 [debug] [Thread-2 (]: Began running node test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2
+[0m00:36:34.238210 [info ] [Thread-2 (]: 15 of 20 START test relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_  [RUN]
+[0m00:36:34.238919 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d, now test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2)
+[0m00:36:34.239350 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2
+[0m00:36:34.254540 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2"
+[0m00:36:34.255792 [debug] [Thread-2 (]: Began executing node test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2
+[0m00:36:34.257946 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2"
+[0m00:36:34.259785 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2"
+[0m00:36:34.260122 [debug] [Thread-2 (]: On test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select currency_id as from_field
+    from CASINO_GAMES_DB.GOLD.gl_activity
+    where currency_id is not null
+),
+
+parent as (
+    select currency_id as to_field
+    from CASINO_GAMES_DB.SILVER.slv_dim_currency
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2"} */
+[0m00:36:34.856481 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.596 seconds
+[0m00:36:34.861246 [info ] [Thread-2 (]: 15 of 20 PASS relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_  [[32mPASS[0m in 0.62s]
+[0m00:36:34.862671 [debug] [Thread-2 (]: Finished running node test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2
+[0m00:36:34.863413 [debug] [Thread-2 (]: Began running node test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86
+[0m00:36:34.864239 [info ] [Thread-2 (]: 16 of 20 START test relationships_gl_activity_game_id__game_id__ref_slv_dim_game_  [RUN]
+[0m00:36:34.865228 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2, now test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86)
+[0m00:36:34.865871 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86
+[0m00:36:34.880879 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86"
+[0m00:36:34.886424 [debug] [Thread-2 (]: Began executing node test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86
+[0m00:36:34.888194 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86"
+[0m00:36:34.890418 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86"
+[0m00:36:34.891014 [debug] [Thread-2 (]: On test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select game_id as from_field
+    from CASINO_GAMES_DB.GOLD.gl_activity
+    where game_id is not null
+),
+
+parent as (
+    select game_id as to_field
+    from CASINO_GAMES_DB.SILVER.slv_dim_game
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86"} */
+[0m00:36:35.553986 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.662 seconds
+[0m00:36:35.558597 [info ] [Thread-2 (]: 16 of 20 PASS relationships_gl_activity_game_id__game_id__ref_slv_dim_game_ .... [[32mPASS[0m in 0.69s]
+[0m00:36:35.560448 [debug] [Thread-2 (]: Finished running node test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86
+[0m00:36:35.561238 [debug] [Thread-2 (]: Began running node test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1
+[0m00:36:35.562056 [info ] [Thread-2 (]: 17 of 20 START test relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_  [RUN]
+[0m00:36:35.562959 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86, now test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1)
+[0m00:36:35.563573 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1
+[0m00:36:35.576667 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1"
+[0m00:36:35.577927 [debug] [Thread-2 (]: Began executing node test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1
+[0m00:36:35.579421 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1"
+[0m00:36:35.580741 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1"
+[0m00:36:35.581068 [debug] [Thread-2 (]: On test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select currency_id as from_field
+    from CASINO_GAMES_DB.SILVER.slv_fact_activity
+    where currency_id is not null
+),
+
+parent as (
+    select currency_id as to_field
+    from CASINO_GAMES_DB.SILVER.slv_dim_currency
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1"} */
+[0m00:36:36.058306 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.477 seconds
+[0m00:36:36.062739 [info ] [Thread-2 (]: 17 of 20 PASS relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_  [[32mPASS[0m in 0.50s]
+[0m00:36:36.064155 [debug] [Thread-2 (]: Finished running node test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1
+[0m00:36:36.064747 [debug] [Thread-2 (]: Began running node test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a
+[0m00:36:36.065504 [info ] [Thread-2 (]: 18 of 20 START test relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_  [RUN]
+[0m00:36:36.066502 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1, now test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a)
+[0m00:36:36.067412 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a
+[0m00:36:36.078488 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a"
+[0m00:36:36.083385 [debug] [Thread-2 (]: Began executing node test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a
+[0m00:36:36.085106 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a"
+[0m00:36:36.086574 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a"
+[0m00:36:36.086942 [debug] [Thread-2 (]: On test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select game_id as from_field
+    from CASINO_GAMES_DB.SILVER.slv_fact_activity
+    where game_id is not null
+),
+
+parent as (
+    select game_id as to_field
+    from CASINO_GAMES_DB.SILVER.slv_dim_game
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a"} */
+[0m00:36:36.740662 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.653 seconds
+[0m00:36:36.744742 [info ] [Thread-2 (]: 18 of 20 PASS relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_  [[32mPASS[0m in 0.68s]
+[0m00:36:36.746019 [debug] [Thread-2 (]: Finished running node test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a
+[0m00:36:36.746709 [debug] [Thread-2 (]: Began running node test.casino_games_models.total_spins_not_zero
+[0m00:36:36.747799 [info ] [Thread-2 (]: 19 of 20 START test total_spins_not_zero ....................................... [RUN]
+[0m00:36:36.749132 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a, now test.casino_games_models.total_spins_not_zero)
+[0m00:36:36.749843 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.total_spins_not_zero
+[0m00:36:36.753162 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.total_spins_not_zero"
+[0m00:36:36.755132 [debug] [Thread-2 (]: Began executing node test.casino_games_models.total_spins_not_zero
+[0m00:36:36.757119 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.total_spins_not_zero"
+[0m00:36:36.758469 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.total_spins_not_zero"
+[0m00:36:36.758819 [debug] [Thread-2 (]: On test.casino_games_models.total_spins_not_zero: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select 
+        casino_id,
+        player_id,
+        game_id,
+        total_spins
+from CASINO_GAMES_DB.SILVER.slv_fact_activity
+where total_spins < 0 -- extract checks for negative spins.
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.total_spins_not_zero"} */
+[0m00:36:37.158945 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.400 seconds
+[0m00:36:37.163377 [info ] [Thread-2 (]: 19 of 20 PASS total_spins_not_zero ............................................. [[32mPASS[0m in 0.41s]
+[0m00:36:37.164943 [debug] [Thread-2 (]: Finished running node test.casino_games_models.total_spins_not_zero
+[0m00:36:37.165643 [debug] [Thread-2 (]: Began running node test.casino_games_models.unique_slv_dim_game_game_id.96796e4803
+[0m00:36:37.166583 [info ] [Thread-2 (]: 20 of 20 START test unique_slv_dim_game_game_id ................................ [RUN]
+[0m00:36:37.167569 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.total_spins_not_zero, now test.casino_games_models.unique_slv_dim_game_game_id.96796e4803)
+[0m00:36:37.168171 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.unique_slv_dim_game_game_id.96796e4803
+[0m00:36:37.178269 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.unique_slv_dim_game_game_id.96796e4803"
+[0m00:36:37.179525 [debug] [Thread-2 (]: Began executing node test.casino_games_models.unique_slv_dim_game_game_id.96796e4803
+[0m00:36:37.180971 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.unique_slv_dim_game_game_id.96796e4803"
+[0m00:36:37.182464 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.unique_slv_dim_game_game_id.96796e4803"
+[0m00:36:37.182818 [debug] [Thread-2 (]: On test.casino_games_models.unique_slv_dim_game_game_id.96796e4803: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    game_id as unique_field,
+    count(*) as n_records
+
+from CASINO_GAMES_DB.SILVER.slv_dim_game
+where game_id is not null
+group by game_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.unique_slv_dim_game_game_id.96796e4803"} */
+[0m00:36:37.584022 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.401 seconds
+[0m00:36:37.587962 [info ] [Thread-2 (]: 20 of 20 PASS unique_slv_dim_game_game_id ...................................... [[32mPASS[0m in 0.42s]
+[0m00:36:37.589045 [debug] [Thread-2 (]: Finished running node test.casino_games_models.unique_slv_dim_game_game_id.96796e4803
+[0m00:36:37.591265 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:36:37.591940 [debug] [MainThread]: Connection 'list_CASINO_GAMES_DB_BRONZE' was left open.
+[0m00:36:37.592437 [debug] [MainThread]: On list_CASINO_GAMES_DB_BRONZE: Close
+[0m00:36:38.216963 [debug] [MainThread]: Connection 'test.casino_games_models.unique_slv_dim_game_game_id.96796e4803' was left open.
+[0m00:36:38.217837 [debug] [MainThread]: On test.casino_games_models.unique_slv_dim_game_game_id.96796e4803: Close
+[0m00:36:38.845469 [info ] [MainThread]: 
+[0m00:36:38.847914 [info ] [MainThread]: Finished running 20 data tests in 0 hours 0 minutes and 17.69 seconds (17.69s).
+[0m00:36:38.853944 [debug] [MainThread]: Command end result
+[0m00:36:38.893464 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\manifest.json
+[0m00:36:38.896170 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\semantic_manifest.json
+[0m00:36:38.899192 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\osi_document.json
+[0m00:36:38.906857 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\run_results.json
+[0m00:36:38.907187 [info ] [MainThread]: 
+[0m00:36:38.907560 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:36:38.907982 [info ] [MainThread]: 
+[0m00:36:38.908317 [info ] [MainThread]: Done. PASS=20 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=20
+[0m00:36:38.908988 [debug] [MainThread]: Command `dbt test` succeeded at 00:36:38.908896 after 19.67 seconds
+[0m00:36:38.909270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CCF3FABC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC97C96F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CC97D19DE0>]}
+[0m00:36:38.909545 [debug] [MainThread]: Flushing usage events
+[0m00:36:39.937153 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:44:10.703527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ACBAC50AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ACBD15FD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ACBD15F890>]}
+
+
+============================== 00:44:10.708832 | 43246486-47e9-40ef-9360-8c035b314ded ==============================
+[0m00:44:10.708832 [info ] [MainThread]: Running with dbt=1.12.0
+[0m00:44:10.709580 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\phikh\\.dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\phikh\\Desktop\\Assessment - Durban\\Game\\casino_games_models\\logs'}
+[0m00:44:10.729755 [info ] [MainThread]: dbt version: 1.12.0
+[0m00:44:10.731257 [info ] [MainThread]: python version: 3.13.9
+[0m00:44:10.731728 [info ] [MainThread]: python path: C:\Users\phikh\Desktop\Assessment - Durban\Game\dbt-env\Scripts\python.exe
+[0m00:44:10.732109 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m00:44:11.880710 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m00:44:11.881203 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m00:44:11.881554 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m00:44:12.006381 [info ] [MainThread]: Using profiles dir at C:\Users\phikh\.dbt
+[0m00:44:12.006951 [info ] [MainThread]: Using profiles.yml file at C:\Users\phikh\.dbt\profiles.yml
+[0m00:44:12.007299 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\dbt_project.yml
+[0m00:44:12.007882 [info ] [MainThread]: adapter type: snowflake
+[0m00:44:12.008294 [info ] [MainThread]: adapter version: 1.12.0
+[0m00:44:12.121006 [info ] [MainThread]: Configuration:
+[0m00:44:12.121576 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:44:12.121931 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:44:12.122216 [info ] [MainThread]: Required dependencies:
+[0m00:44:12.122489 [debug] [MainThread]: Executing "git --help"
+[0m00:44:12.157729 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:44:12.158204 [debug] [MainThread]: STDERR: "b''"
+[0m00:44:12.158573 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:44:12.159198 [info ] [MainThread]: Connection:
+[0m00:44:12.159598 [info ] [MainThread]:   account: CPARMEO-XQ80160
+[0m00:44:12.159967 [info ] [MainThread]:   user: phikhonamthembu
+[0m00:44:12.160290 [info ] [MainThread]:   database: CASINO_GAMES_DB
+[0m00:44:12.160584 [info ] [MainThread]:   warehouse: COMPUTE_WH
+[0m00:44:12.160871 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m00:44:12.161135 [info ] [MainThread]:   schema: public
+[0m00:44:12.161402 [info ] [MainThread]:   authenticator: None
+[0m00:44:12.161664 [info ] [MainThread]:   oauth_client_id: None
+[0m00:44:12.161927 [info ] [MainThread]:   query_tag: None
+[0m00:44:12.162180 [info ] [MainThread]:   client_session_keep_alive: False
+[0m00:44:12.162455 [info ] [MainThread]:   host: None
+[0m00:44:12.162707 [info ] [MainThread]:   port: None
+[0m00:44:12.162978 [info ] [MainThread]:   proxy_host: None
+[0m00:44:12.163255 [info ] [MainThread]:   proxy_port: None
+[0m00:44:12.163599 [info ] [MainThread]:   protocol: None
+[0m00:44:12.163931 [info ] [MainThread]:   connect_retries: 1
+[0m00:44:12.164198 [info ] [MainThread]:   connect_timeout: None
+[0m00:44:12.164445 [info ] [MainThread]:   retry_on_database_errors: False
+[0m00:44:12.164698 [info ] [MainThread]:   retry_all: False
+[0m00:44:12.165052 [info ] [MainThread]:   insecure_mode: False
+[0m00:44:12.165416 [info ] [MainThread]:   reuse_connections: True
+[0m00:44:12.165718 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m00:44:12.165995 [info ] [MainThread]:   workload_identity_provider: None
+[0m00:44:12.166317 [info ] [MainThread]:   workload_identity_entra_resource: None
+[0m00:44:12.166630 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m00:44:12.167302 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m00:44:12.505841 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m00:44:12.508445 [debug] [MainThread]: Using snowflake connection "debug"
+[0m00:44:12.508743 [debug] [MainThread]: On debug: select 1 as id
+[0m00:44:12.508947 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:44:14.417870 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.909 seconds
+[0m00:44:14.420714 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m00:44:14.421932 [info ] [MainThread]: [32mAll checks passed![0m
+[0m00:44:14.423651 [debug] [MainThread]: Command `dbt debug` succeeded at 00:44:14.423415 after 3.92 seconds
+[0m00:44:14.424380 [debug] [MainThread]: Connection 'debug' was left open.
+[0m00:44:14.424953 [debug] [MainThread]: On debug: Close
+[0m00:44:15.057034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ACDEF6C8A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ACDF1BD5B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002ACDF06E140>]}
+[0m00:44:15.058259 [debug] [MainThread]: Flushing usage events
+[0m00:44:16.105604 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:44:26.594604 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2132D0AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E20EFCD090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E21582BB10>]}
+
+
+============================== 00:44:26.597943 | d307ff64-0a63-4e6f-8988-4f6e034b4f10 ==============================
+[0m00:44:26.597943 [info ] [MainThread]: Running with dbt=1.12.0
+[0m00:44:26.598533 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\phikh\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run', 'log_path': 'C:\\Users\\phikh\\Desktop\\Assessment - Durban\\Game\\casino_games_models\\logs'}
+[0m00:44:27.223575 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m00:44:27.223984 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m00:44:27.224740 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m00:44:27.600299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd307ff64-0a63-4e6f-8988-4f6e034b4f10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E213756520>]}
+[0m00:44:27.657862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd307ff64-0a63-4e6f-8988-4f6e034b4f10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E237563BD0>]}
+[0m00:44:27.658910 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m00:44:27.870158 [debug] [MainThread]: checksum: 1a6b985475c43e53b2f98cbefdf6b1c7ac77b1831d8f6308313897c656dd32df, vars: {}, profile: casino_games_models, target: dev, version: 1.12.0
+[0m00:44:28.054060 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:44:28.054399 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m00:44:28.054612 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:44:28.063917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd307ff64-0a63-4e6f-8988-4f6e034b4f10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E238BAF950>]}
+[0m00:44:28.219699 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\manifest.json
+[0m00:44:28.222806 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\semantic_manifest.json
+[0m00:44:28.248394 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\osi_document.json
+[0m00:44:28.259108 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd307ff64-0a63-4e6f-8988-4f6e034b4f10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E238A6E6C0>]}
+[0m00:44:28.259564 [info ] [MainThread]: Found 8 models, 20 data tests, 3 seeds, 3 sources, 546 macros
+[0m00:44:28.260146 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd307ff64-0a63-4e6f-8988-4f6e034b4f10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E238D19A90>]}
+[0m00:44:28.262258 [info ] [MainThread]: 
+[0m00:44:28.262640 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:44:28.262996 [info ] [MainThread]: 
+[0m00:44:28.263598 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m00:44:28.268223 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CASINO_GAMES_DB'
+[0m00:44:28.282852 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB"
+[0m00:44:28.283261 [debug] [ThreadPool]: On list_CASINO_GAMES_DB: show terse schemas in database CASINO_GAMES_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB"} */
+[0m00:44:28.283517 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:44:30.201377 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 1.918 seconds
+[0m00:44:30.208505 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB"
+[0m00:44:30.209194 [debug] [ThreadPool]: On list_CASINO_GAMES_DB: show terse schemas in database CASINO_GAMES_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB"} */
+[0m00:44:30.568416 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.359 seconds
+[0m00:44:30.573653 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB"
+[0m00:44:30.574448 [debug] [ThreadPool]: On list_CASINO_GAMES_DB: show terse schemas in database CASINO_GAMES_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB"} */
+[0m00:44:30.981481 [debug] [ThreadPool]: SQL status: SUCCESS 6 in 0.406 seconds
+[0m00:44:30.988262 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CASINO_GAMES_DB_public'
+[0m00:44:31.005345 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_public"
+[0m00:44:31.005664 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_public: show objects in CASINO_GAMES_DB.public
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_public"} */;
+[0m00:44:31.005911 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:44:32.597207 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.591 seconds
+[0m00:44:32.604803 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_public"
+[0m00:44:32.605193 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_public: show user functions in CASINO_GAMES_DB.public
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_public"} */
+[0m00:44:32.995894 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.390 seconds
+[0m00:44:32.999748 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CASINO_GAMES_DB_public, now list_CASINO_GAMES_DB_GOLD)
+[0m00:44:33.003224 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_GOLD"
+[0m00:44:33.003873 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_GOLD: show objects in CASINO_GAMES_DB.GOLD
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_GOLD"} */;
+[0m00:44:33.396977 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.392 seconds
+[0m00:44:33.403034 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_GOLD"
+[0m00:44:33.403776 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_GOLD: show user functions in CASINO_GAMES_DB.GOLD
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_GOLD"} */
+[0m00:44:33.753222 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.349 seconds
+[0m00:44:33.757141 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CASINO_GAMES_DB_GOLD, now list_CASINO_GAMES_DB_SILVER)
+[0m00:44:33.761296 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_SILVER"
+[0m00:44:33.761972 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_SILVER: show objects in CASINO_GAMES_DB.SILVER
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_SILVER"} */;
+[0m00:44:34.153444 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.391 seconds
+[0m00:44:34.158228 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_SILVER"
+[0m00:44:34.158893 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_SILVER: show user functions in CASINO_GAMES_DB.SILVER
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_SILVER"} */
+[0m00:44:34.487428 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.328 seconds
+[0m00:44:34.492061 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CASINO_GAMES_DB_SILVER, now list_CASINO_GAMES_DB_BRONZE)
+[0m00:44:34.495778 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_BRONZE"
+[0m00:44:34.496359 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_BRONZE: show objects in CASINO_GAMES_DB.BRONZE
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_BRONZE"} */;
+[0m00:44:34.900103 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.403 seconds
+[0m00:44:34.905767 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_BRONZE"
+[0m00:44:34.906059 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_BRONZE: show user functions in CASINO_GAMES_DB.BRONZE
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_BRONZE"} */
+[0m00:44:35.245010 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.339 seconds
+[0m00:44:35.249892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd307ff64-0a63-4e6f-8988-4f6e034b4f10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E238F31CC0>]}
+[0m00:44:35.258519 [debug] [Thread-2 (]: Began running node model.casino_games_models.br_dim_currency
+[0m00:44:35.259395 [info ] [Thread-2 (]: 1 of 8 START sql view model BRONZE.br_dim_currency ............................. [RUN]
+[0m00:44:35.260890 [debug] [Thread-2 (]: Acquiring new snowflake connection 'model.casino_games_models.br_dim_currency'
+[0m00:44:35.261258 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.br_dim_currency
+[0m00:44:35.266318 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.br_dim_currency"
+[0m00:44:35.267198 [debug] [Thread-2 (]: Began executing node model.casino_games_models.br_dim_currency
+[0m00:44:35.290707 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.br_dim_currency"
+[0m00:44:35.294099 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.br_dim_currency"
+[0m00:44:35.294508 [debug] [Thread-2 (]: On model.casino_games_models.br_dim_currency: create or replace   view CASINO_GAMES_DB.BRONZE.br_dim_currency
+  
+  
+  
+  
+  as (
+    SELECT  *
+FROM    CASINO_GAMES_DB.RAW.raw_dim_currency
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.br_dim_currency"} */;
+[0m00:44:35.294786 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m00:44:36.939264 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.644 seconds
+[0m00:44:36.966084 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd307ff64-0a63-4e6f-8988-4f6e034b4f10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E239025D90>]}
+[0m00:44:36.966611 [info ] [Thread-2 (]: 1 of 8 OK created sql view model BRONZE.br_dim_currency ........................ [[32mSUCCESS 1[0m in 1.70s]
+[0m00:44:36.967298 [debug] [Thread-2 (]: Finished running node model.casino_games_models.br_dim_currency
+[0m00:44:36.967628 [debug] [Thread-2 (]: Began running node model.casino_games_models.br_dim_game
+[0m00:44:36.968120 [info ] [Thread-2 (]: 2 of 8 START sql view model BRONZE.br_dim_game ................................. [RUN]
+[0m00:44:36.968572 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.casino_games_models.br_dim_currency, now model.casino_games_models.br_dim_game)
+[0m00:44:36.968883 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.br_dim_game
+[0m00:44:36.970394 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.br_dim_game"
+[0m00:44:36.971294 [debug] [Thread-2 (]: Began executing node model.casino_games_models.br_dim_game
+[0m00:44:36.972765 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.br_dim_game"
+[0m00:44:36.973542 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.br_dim_game"
+[0m00:44:36.973818 [debug] [Thread-2 (]: On model.casino_games_models.br_dim_game: create or replace   view CASINO_GAMES_DB.BRONZE.br_dim_game
+  
+  
+  
+  
+  as (
+    SELECT  *
+FROM    CASINO_GAMES_DB.RAW.raw_dim_game
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.br_dim_game"} */;
+[0m00:44:37.598101 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.624 seconds
+[0m00:44:37.602200 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd307ff64-0a63-4e6f-8988-4f6e034b4f10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2371B2F10>]}
+[0m00:44:37.603036 [info ] [Thread-2 (]: 2 of 8 OK created sql view model BRONZE.br_dim_game ............................ [[32mSUCCESS 1[0m in 0.63s]
+[0m00:44:37.603858 [debug] [Thread-2 (]: Finished running node model.casino_games_models.br_dim_game
+[0m00:44:37.604274 [debug] [Thread-2 (]: Began running node model.casino_games_models.br_fact_activity
+[0m00:44:37.604827 [info ] [Thread-2 (]: 3 of 8 START sql view model BRONZE.br_fact_activity ............................ [RUN]
+[0m00:44:37.605464 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.casino_games_models.br_dim_game, now model.casino_games_models.br_fact_activity)
+[0m00:44:37.605834 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.br_fact_activity
+[0m00:44:37.607456 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.br_fact_activity"
+[0m00:44:37.608528 [debug] [Thread-2 (]: Began executing node model.casino_games_models.br_fact_activity
+[0m00:44:37.610630 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.br_fact_activity"
+[0m00:44:37.611546 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.br_fact_activity"
+[0m00:44:37.611847 [debug] [Thread-2 (]: On model.casino_games_models.br_fact_activity: create or replace   view CASINO_GAMES_DB.BRONZE.br_fact_activity
+  
+  
+  
+  
+  as (
+    SELECT  *
+FROM    CASINO_GAMES_DB.RAW.raw_fact_activity
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.br_fact_activity"} */;
+[0m00:44:38.123337 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.511 seconds
+[0m00:44:38.128723 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd307ff64-0a63-4e6f-8988-4f6e034b4f10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E238EEDDB0>]}
+[0m00:44:38.129857 [info ] [Thread-2 (]: 3 of 8 OK created sql view model BRONZE.br_fact_activity ....................... [[32mSUCCESS 1[0m in 0.52s]
+[0m00:44:38.131302 [debug] [Thread-2 (]: Finished running node model.casino_games_models.br_fact_activity
+[0m00:44:38.131957 [debug] [Thread-2 (]: Began running node model.casino_games_models.slv_dim_currency
+[0m00:44:38.132818 [info ] [Thread-2 (]: 4 of 8 START sql view model SILVER.slv_dim_currency ............................ [RUN]
+[0m00:44:38.133753 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.casino_games_models.br_fact_activity, now model.casino_games_models.slv_dim_currency)
+[0m00:44:38.134353 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.slv_dim_currency
+[0m00:44:38.136804 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.slv_dim_currency"
+[0m00:44:38.137930 [debug] [Thread-2 (]: Began executing node model.casino_games_models.slv_dim_currency
+[0m00:44:38.139848 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.slv_dim_currency"
+[0m00:44:38.140821 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.slv_dim_currency"
+[0m00:44:38.141131 [debug] [Thread-2 (]: On model.casino_games_models.slv_dim_currency: create or replace   view CASINO_GAMES_DB.SILVER.slv_dim_currency
+  
+  
+  
+  
+  as (
+    with dim_currency as (
+    select * from CASINO_GAMES_DB.BRONZE.br_dim_currency
+)
+select 
+        CURRENCYID as currency_id, 
+        cast(EXCHANGE_RATE_TO_BASE as float) as currency_rate
+from    dim_currency
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.slv_dim_currency"} */;
+[0m00:44:38.763904 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.622 seconds
+[0m00:44:38.767901 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd307ff64-0a63-4e6f-8988-4f6e034b4f10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2390BAA50>]}
+[0m00:44:38.768659 [info ] [Thread-2 (]: 4 of 8 OK created sql view model SILVER.slv_dim_currency ....................... [[32mSUCCESS 1[0m in 0.63s]
+[0m00:44:38.769478 [debug] [Thread-2 (]: Finished running node model.casino_games_models.slv_dim_currency
+[0m00:44:38.769886 [debug] [Thread-2 (]: Began running node model.casino_games_models.slv_dim_game
+[0m00:44:38.770345 [info ] [Thread-2 (]: 5 of 8 START sql view model SILVER.slv_dim_game ................................ [RUN]
+[0m00:44:38.770903 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.casino_games_models.slv_dim_currency, now model.casino_games_models.slv_dim_game)
+[0m00:44:38.771256 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.slv_dim_game
+[0m00:44:38.773266 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.slv_dim_game"
+[0m00:44:38.774300 [debug] [Thread-2 (]: Began executing node model.casino_games_models.slv_dim_game
+[0m00:44:38.776717 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.slv_dim_game"
+[0m00:44:38.777671 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.slv_dim_game"
+[0m00:44:38.777978 [debug] [Thread-2 (]: On model.casino_games_models.slv_dim_game: create or replace   view CASINO_GAMES_DB.SILVER.slv_dim_game
+  
+  
+  
+  
+  as (
+    with dim_game as(
+    select * from CASINO_GAMES_DB.BRONZE.br_dim_game
+)
+select  
+        GAMEID as game_id ,
+        GAMETYPE as game_type, 
+        parse_json(THEMES) as themes, 
+        parse_json(MECHANICS) as mechanics
+from    dim_game
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.slv_dim_game"} */;
+[0m00:44:39.336412 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.558 seconds
+[0m00:44:39.340386 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd307ff64-0a63-4e6f-8988-4f6e034b4f10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E238D0A350>]}
+[0m00:44:39.341242 [info ] [Thread-2 (]: 5 of 8 OK created sql view model SILVER.slv_dim_game ........................... [[32mSUCCESS 1[0m in 0.57s]
+[0m00:44:39.342262 [debug] [Thread-2 (]: Finished running node model.casino_games_models.slv_dim_game
+[0m00:44:39.342696 [debug] [Thread-2 (]: Began running node model.casino_games_models.slv_fact_activity
+[0m00:44:39.343260 [info ] [Thread-2 (]: 6 of 8 START sql view model SILVER.slv_fact_activity ........................... [RUN]
+[0m00:44:39.343942 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.casino_games_models.slv_dim_game, now model.casino_games_models.slv_fact_activity)
+[0m00:44:39.344304 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.slv_fact_activity
+[0m00:44:39.345874 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.slv_fact_activity"
+[0m00:44:39.347360 [debug] [Thread-2 (]: Began executing node model.casino_games_models.slv_fact_activity
+[0m00:44:39.349280 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.slv_fact_activity"
+[0m00:44:39.350600 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.slv_fact_activity"
+[0m00:44:39.350943 [debug] [Thread-2 (]: On model.casino_games_models.slv_fact_activity: create or replace   view CASINO_GAMES_DB.SILVER.slv_fact_activity
+  
+  
+  
+  
+  as (
+    with slv_fact_activity as (
+    select * from CASINO_GAMES_DB.BRONZE.br_fact_activity
+
+)
+select  
+        
+        CASINOID as casino_id,
+        PLAYERID as player_id,
+        GAMEID as game_id,
+        CURRENCYID as currency_id, 
+
+        -- handling transformation of financial data
+        cast(TOTALWAGER as float) as total_wager, 
+        cast(TOTALPAYOUT as float) as total_payout,
+        cast(TOTALSPINS as integer) as total_spins,
+        
+        -- converting dates  
+        coalesce(
+        try_to_date(trim(replace(GOLIVE_DATE, '"', '')), 'YYYY/MM/DD'),
+        try_to_date(trim(replace(GOLIVE_DATE, '"', '')), 'YYYY-MM-DD')
+    ) as golive_date,
+        coalesce(
+        try_to_date(trim(replace(date, '"', '')), 'YYYY/MM/DD'),
+        try_to_date(trim(replace(date, '"', '')), 'YYYY-MM-DD')
+    ) as activity_date
+from    slv_fact_activity
+  )
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.slv_fact_activity"} */;
+[0m00:44:39.893740 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.542 seconds
+[0m00:44:39.899162 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd307ff64-0a63-4e6f-8988-4f6e034b4f10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E23912A090>]}
+[0m00:44:39.900325 [info ] [Thread-2 (]: 6 of 8 OK created sql view model SILVER.slv_fact_activity ...................... [[32mSUCCESS 1[0m in 0.56s]
+[0m00:44:39.901565 [debug] [Thread-2 (]: Finished running node model.casino_games_models.slv_fact_activity
+[0m00:44:39.902171 [debug] [Thread-2 (]: Began running node model.casino_games_models.gl_game
+[0m00:44:39.903022 [info ] [Thread-2 (]: 7 of 8 START sql table model GOLD.gl_game ...................................... [RUN]
+[0m00:44:39.904088 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.casino_games_models.slv_fact_activity, now model.casino_games_models.gl_game)
+[0m00:44:39.904969 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.gl_game
+[0m00:44:39.908223 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.gl_game"
+[0m00:44:39.909621 [debug] [Thread-2 (]: Began executing node model.casino_games_models.gl_game
+[0m00:44:39.933842 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.gl_game"
+[0m00:44:39.935043 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.gl_game"
+[0m00:44:39.935380 [debug] [Thread-2 (]: On model.casino_games_models.gl_game: create or replace transient table CASINO_GAMES_DB.GOLD.gl_game
+    
+    
+    
+    
+    
+
+    as (with game as (
+    select * from CASINO_GAMES_DB.SILVER.slv_dim_game
+
+)
+select * from game
+    )
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.gl_game"} */;
+[0m00:44:42.230417 [debug] [Thread-2 (]: SQL status: SUCCESS 12413 in 2.294 seconds
+[0m00:44:42.234962 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd307ff64-0a63-4e6f-8988-4f6e034b4f10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2391456D0>]}
+[0m00:44:42.236118 [info ] [Thread-2 (]: 7 of 8 OK created sql table model GOLD.gl_game ................................. [[32mSUCCESS 12413[0m in 2.33s]
+[0m00:44:42.237474 [debug] [Thread-2 (]: Finished running node model.casino_games_models.gl_game
+[0m00:44:42.238072 [debug] [Thread-2 (]: Began running node model.casino_games_models.gl_activity
+[0m00:44:42.239002 [info ] [Thread-2 (]: 8 of 8 START sql table model GOLD.gl_activity .................................. [RUN]
+[0m00:44:42.240031 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.casino_games_models.gl_game, now model.casino_games_models.gl_activity)
+[0m00:44:42.240607 [debug] [Thread-2 (]: Began compiling node model.casino_games_models.gl_activity
+[0m00:44:42.244217 [debug] [Thread-2 (]: Writing injected SQL for node "model.casino_games_models.gl_activity"
+[0m00:44:42.246598 [debug] [Thread-2 (]: Began executing node model.casino_games_models.gl_activity
+[0m00:44:42.249449 [debug] [Thread-2 (]: Writing runtime sql for node "model.casino_games_models.gl_activity"
+[0m00:44:42.252351 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.gl_activity"
+[0m00:44:42.253137 [debug] [Thread-2 (]: On model.casino_games_models.gl_activity: create or replace transient table CASINO_GAMES_DB.GOLD.gl_activity
+    
+    
+    
+    
+    
+
+    as (with currency as (
+    select * from CASINO_GAMES_DB.SILVER.slv_dim_currency
+),
+activity as (
+    select * from CASINO_GAMES_DB.SILVER.slv_fact_activity
+)
+
+select  
+        act.activity_date, 
+        act.casino_id, 
+        act.player_id, 
+        act.game_id, 
+        act.currency_id,
+        act.total_spins, 
+        act.golive_date,
+        act.total_wager * cur.currency_rate as total_wager_rated, -- converting to provided rates
+        act.total_payout * cur.currency_rate as total_payout,   -- converting to provided rates
+        (act.total_wager * cur.currency_rate) - act.total_payout * cur.currency_rate as net_wins -- calculating total wins
+
+from    activity act
+left outer join 
+        currency cur
+on      act.currency_id =  cur.currency_id
+    )
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.gl_activity"} */;
+[0m00:44:45.390589 [debug] [Thread-2 (]: SQL status: SUCCESS 973831 in 3.137 seconds
+[0m00:44:45.401131 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.gl_activity"
+[0m00:44:45.401571 [debug] [Thread-2 (]: On model.casino_games_models.gl_activity: comment on table CASINO_GAMES_DB.GOLD.gl_activity IS $$this model contains daily casino activity$$
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.gl_activity"} */;
+[0m00:44:45.799627 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.397 seconds
+[0m00:44:45.820958 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.gl_activity"
+[0m00:44:45.821428 [debug] [Thread-2 (]: On model.casino_games_models.gl_activity: describe table CASINO_GAMES_DB.GOLD.gl_activity
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.gl_activity"} */
+[0m00:44:46.155955 [debug] [Thread-2 (]: SQL status: SUCCESS 10 in 0.334 seconds
+[0m00:44:46.175511 [debug] [Thread-2 (]: Using snowflake connection "model.casino_games_models.gl_activity"
+[0m00:44:46.175865 [debug] [Thread-2 (]: On model.casino_games_models.gl_activity: alter  table CASINO_GAMES_DB.GOLD.gl_activity alter
+    
+        "ACTIVITY_DATE" COMMENT $$$$,
+    
+        "CASINO_ID" COMMENT $$$$,
+    
+        "PLAYER_ID" COMMENT $$$$,
+    
+        "GAME_ID" COMMENT $$$$,
+    
+        "CURRENCY_ID" COMMENT $$$$,
+    
+        "TOTAL_SPINS" COMMENT $$$$,
+    
+        "GOLIVE_DATE" COMMENT $$$$,
+    
+        "TOTAL_WAGER_RATED" COMMENT $$$$,
+    
+        "TOTAL_PAYOUT" COMMENT $$$$,
+    
+        "NET_WINS" COMMENT $$$$
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "model.casino_games_models.gl_activity"} */;
+[0m00:44:46.573232 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.397 seconds
+[0m00:44:46.576955 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd307ff64-0a63-4e6f-8988-4f6e034b4f10', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E239145DF0>]}
+[0m00:44:46.578029 [info ] [Thread-2 (]: 8 of 8 OK created sql table model GOLD.gl_activity ............................. [[32mSUCCESS 973831[0m in 4.34s]
+[0m00:44:46.579298 [debug] [Thread-2 (]: Finished running node model.casino_games_models.gl_activity
+[0m00:44:46.581191 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:44:46.581546 [debug] [MainThread]: Connection 'list_CASINO_GAMES_DB' was left open.
+[0m00:44:46.581970 [debug] [MainThread]: On list_CASINO_GAMES_DB: Close
+[0m00:44:47.208610 [debug] [MainThread]: Connection 'list_CASINO_GAMES_DB_BRONZE' was left open.
+[0m00:44:47.209731 [debug] [MainThread]: On list_CASINO_GAMES_DB_BRONZE: Close
+[0m00:44:47.836229 [debug] [MainThread]: Connection 'model.casino_games_models.gl_activity' was left open.
+[0m00:44:47.836987 [debug] [MainThread]: On model.casino_games_models.gl_activity: Close
+[0m00:44:48.447405 [info ] [MainThread]: 
+[0m00:44:48.448608 [info ] [MainThread]: Finished running 2 table models, 6 view models in 0 hours 0 minutes and 20.18 seconds (20.18s).
+[0m00:44:48.452390 [debug] [MainThread]: Command end result
+[0m00:44:48.491185 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\manifest.json
+[0m00:44:48.494386 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\semantic_manifest.json
+[0m00:44:48.497360 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\osi_document.json
+[0m00:44:48.504306 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\run_results.json
+[0m00:44:48.504646 [info ] [MainThread]: 
+[0m00:44:48.505382 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:44:48.506011 [info ] [MainThread]: 
+[0m00:44:48.506421 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=8
+[0m00:44:48.507217 [debug] [MainThread]: Command `dbt run` succeeded at 00:44:48.507112 after 22.07 seconds
+[0m00:44:48.507653 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2390074D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E21583A090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E2391455B0>]}
+[0m00:44:48.507982 [debug] [MainThread]: Flushing usage events
+[0m00:44:49.775740 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:46:16.743716 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD5AF0AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD17DD090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD804FB10>]}
+
+
+============================== 00:46:16.748619 | 0b4226bd-4e7f-4eb4-82d8-5c215e660bb3 ==============================
+[0m00:46:16.748619 [info ] [MainThread]: Running with dbt=1.12.0
+[0m00:46:16.749171 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\phikh\\.dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt test', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\phikh\\Desktop\\Assessment - Durban\\Game\\casino_games_models\\logs'}
+[0m00:46:17.798361 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m00:46:17.798789 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m00:46:17.799105 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m00:46:18.079945 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0b4226bd-4e7f-4eb4-82d8-5c215e660bb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD5F76520>]}
+[0m00:46:18.134407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0b4226bd-4e7f-4eb4-82d8-5c215e660bb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDF9D7FBD0>]}
+[0m00:46:18.135300 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m00:46:18.347883 [debug] [MainThread]: checksum: 1a6b985475c43e53b2f98cbefdf6b1c7ac77b1831d8f6308313897c656dd32df, vars: {}, profile: casino_games_models, target: dev, version: 1.12.0
+[0m00:46:18.516597 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:46:18.516918 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m00:46:18.517128 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:46:18.524906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0b4226bd-4e7f-4eb4-82d8-5c215e660bb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDFB3BF950>]}
+[0m00:46:18.677469 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\manifest.json
+[0m00:46:18.680490 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\semantic_manifest.json
+[0m00:46:18.702092 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\osi_document.json
+[0m00:46:18.720917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0b4226bd-4e7f-4eb4-82d8-5c215e660bb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDFB4B1A90>]}
+[0m00:46:18.721323 [info ] [MainThread]: Found 8 models, 20 data tests, 3 seeds, 3 sources, 546 macros
+[0m00:46:18.721759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0b4226bd-4e7f-4eb4-82d8-5c215e660bb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDFB591C50>]}
+[0m00:46:18.724277 [info ] [MainThread]: 
+[0m00:46:18.724665 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:46:18.724974 [info ] [MainThread]: 
+[0m00:46:18.725423 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m00:46:18.729361 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_CASINO_GAMES_DB_SILVER'
+[0m00:46:18.747752 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_SILVER"
+[0m00:46:18.748092 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_SILVER: show objects in CASINO_GAMES_DB.SILVER
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_SILVER"} */;
+[0m00:46:18.748340 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:46:20.954783 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 2.206 seconds
+[0m00:46:20.964714 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_SILVER"
+[0m00:46:20.965071 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_SILVER: show user functions in CASINO_GAMES_DB.SILVER
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_SILVER"} */
+[0m00:46:21.330777 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.365 seconds
+[0m00:46:21.335291 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CASINO_GAMES_DB_SILVER, now list_CASINO_GAMES_DB_public)
+[0m00:46:21.341466 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_public"
+[0m00:46:21.341977 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_public: show objects in CASINO_GAMES_DB.public
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_public"} */;
+[0m00:46:21.760930 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.418 seconds
+[0m00:46:21.770431 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_public"
+[0m00:46:21.771990 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_public: show user functions in CASINO_GAMES_DB.public
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_public"} */
+[0m00:46:22.123823 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.350 seconds
+[0m00:46:22.129742 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CASINO_GAMES_DB_public, now list_CASINO_GAMES_DB_BRONZE)
+[0m00:46:22.134113 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_BRONZE"
+[0m00:46:22.135701 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_BRONZE: show objects in CASINO_GAMES_DB.BRONZE
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_BRONZE"} */;
+[0m00:46:22.631914 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.495 seconds
+[0m00:46:22.639731 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_BRONZE"
+[0m00:46:22.640654 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_BRONZE: show user functions in CASINO_GAMES_DB.BRONZE
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_BRONZE"} */
+[0m00:46:22.986878 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.345 seconds
+[0m00:46:23.000851 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_CASINO_GAMES_DB_BRONZE, now list_CASINO_GAMES_DB_GOLD)
+[0m00:46:23.006418 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_GOLD"
+[0m00:46:23.007719 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_GOLD: show objects in CASINO_GAMES_DB.GOLD
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_GOLD"} */;
+[0m00:46:23.509390 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.500 seconds
+[0m00:46:23.514208 [debug] [ThreadPool]: Using snowflake connection "list_CASINO_GAMES_DB_GOLD"
+[0m00:46:23.514911 [debug] [ThreadPool]: On list_CASINO_GAMES_DB_GOLD: show user functions in CASINO_GAMES_DB.GOLD
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "connection_name": "list_CASINO_GAMES_DB_GOLD"} */
+[0m00:46:23.842282 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.327 seconds
+[0m00:46:23.844285 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0b4226bd-4e7f-4eb4-82d8-5c215e660bb3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDFB62A4E0>]}
+[0m00:46:23.847260 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_gl_activity_activity_date.af25794d10
+[0m00:46:23.847592 [info ] [Thread-2 (]: 1 of 20 START test not_null_gl_activity_activity_date .......................... [RUN]
+[0m00:46:23.848110 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.casino_games_models.not_null_gl_activity_activity_date.af25794d10'
+[0m00:46:23.848392 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_gl_activity_activity_date.af25794d10
+[0m00:46:23.865644 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_gl_activity_activity_date.af25794d10"
+[0m00:46:23.866484 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_gl_activity_activity_date.af25794d10
+[0m00:46:23.892016 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_gl_activity_activity_date.af25794d10"
+[0m00:46:23.893615 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_gl_activity_activity_date.af25794d10"
+[0m00:46:23.893988 [debug] [Thread-2 (]: On test.casino_games_models.not_null_gl_activity_activity_date.af25794d10: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select activity_date
+from CASINO_GAMES_DB.GOLD.gl_activity
+where activity_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_gl_activity_activity_date.af25794d10"} */
+[0m00:46:23.894293 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m00:46:25.461201 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.566 seconds
+[0m00:46:25.474694 [info ] [Thread-2 (]: 1 of 20 PASS not_null_gl_activity_activity_date ................................ [[32mPASS[0m in 1.63s]
+[0m00:46:25.475335 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_gl_activity_activity_date.af25794d10
+[0m00:46:25.475643 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012
+[0m00:46:25.475984 [info ] [Thread-2 (]: 2 of 20 START test not_null_gl_activity_casino_id .............................. [RUN]
+[0m00:46:25.476426 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_gl_activity_activity_date.af25794d10, now test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012)
+[0m00:46:25.476705 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012
+[0m00:46:25.481811 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012"
+[0m00:46:25.482737 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012
+[0m00:46:25.483983 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012"
+[0m00:46:25.484797 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012"
+[0m00:46:25.485089 [debug] [Thread-2 (]: On test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select casino_id
+from CASINO_GAMES_DB.GOLD.gl_activity
+where casino_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012"} */
+[0m00:46:25.919687 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.434 seconds
+[0m00:46:25.924090 [info ] [Thread-2 (]: 2 of 20 PASS not_null_gl_activity_casino_id .................................... [[32mPASS[0m in 0.45s]
+[0m00:46:25.925523 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012
+[0m00:46:25.926135 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7
+[0m00:46:25.926895 [info ] [Thread-2 (]: 3 of 20 START test not_null_gl_activity_currency_id ............................ [RUN]
+[0m00:46:25.927826 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_gl_activity_casino_id.e114d3e012, now test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7)
+[0m00:46:25.928528 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7
+[0m00:46:25.937898 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7"
+[0m00:46:25.939072 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7
+[0m00:46:25.940478 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7"
+[0m00:46:25.941533 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7"
+[0m00:46:25.941827 [debug] [Thread-2 (]: On test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select currency_id
+from CASINO_GAMES_DB.GOLD.gl_activity
+where currency_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7"} */
+[0m00:46:26.460550 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.518 seconds
+[0m00:46:26.464389 [info ] [Thread-2 (]: 3 of 20 PASS not_null_gl_activity_currency_id .................................. [[32mPASS[0m in 0.54s]
+[0m00:46:26.465887 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7
+[0m00:46:26.466617 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2
+[0m00:46:26.467483 [info ] [Thread-2 (]: 4 of 20 START test not_null_gl_activity_game_id ................................ [RUN]
+[0m00:46:26.468528 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_gl_activity_currency_id.c403b33ef7, now test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2)
+[0m00:46:26.469149 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2
+[0m00:46:26.476469 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2"
+[0m00:46:26.477404 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2
+[0m00:46:26.478748 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2"
+[0m00:46:26.480351 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2"
+[0m00:46:26.480672 [debug] [Thread-2 (]: On test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select game_id
+from CASINO_GAMES_DB.GOLD.gl_activity
+where game_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2"} */
+[0m00:46:26.956023 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.475 seconds
+[0m00:46:26.960123 [info ] [Thread-2 (]: 4 of 20 PASS not_null_gl_activity_game_id ...................................... [[32mPASS[0m in 0.49s]
+[0m00:46:26.961640 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2
+[0m00:46:26.962349 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_gl_activity_golive_date.00569d579d
+[0m00:46:26.963312 [info ] [Thread-2 (]: 5 of 20 START test not_null_gl_activity_golive_date ............................ [RUN]
+[0m00:46:26.964569 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_gl_activity_game_id.6cee7f93d2, now test.casino_games_models.not_null_gl_activity_golive_date.00569d579d)
+[0m00:46:26.965390 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_gl_activity_golive_date.00569d579d
+[0m00:46:26.972654 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_gl_activity_golive_date.00569d579d"
+[0m00:46:26.973434 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_gl_activity_golive_date.00569d579d
+[0m00:46:26.974785 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_gl_activity_golive_date.00569d579d"
+[0m00:46:26.975668 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_gl_activity_golive_date.00569d579d"
+[0m00:46:26.975962 [debug] [Thread-2 (]: On test.casino_games_models.not_null_gl_activity_golive_date.00569d579d: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select golive_date
+from CASINO_GAMES_DB.GOLD.gl_activity
+where golive_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_gl_activity_golive_date.00569d579d"} */
+[0m00:46:27.325834 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.350 seconds
+[0m00:46:27.327659 [info ] [Thread-2 (]: 5 of 20 PASS not_null_gl_activity_golive_date .................................. [[32mPASS[0m in 0.36s]
+[0m00:46:27.328488 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_gl_activity_golive_date.00569d579d
+[0m00:46:27.328836 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034
+[0m00:46:27.329155 [info ] [Thread-2 (]: 6 of 20 START test not_null_gl_activity_player_id .............................. [RUN]
+[0m00:46:27.329756 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_gl_activity_golive_date.00569d579d, now test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034)
+[0m00:46:27.330049 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034
+[0m00:46:27.335619 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034"
+[0m00:46:27.336428 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034
+[0m00:46:27.337751 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034"
+[0m00:46:27.338637 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034"
+[0m00:46:27.338937 [debug] [Thread-2 (]: On test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select player_id
+from CASINO_GAMES_DB.GOLD.gl_activity
+where player_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034"} */
+[0m00:46:27.682027 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.343 seconds
+[0m00:46:27.684690 [info ] [Thread-2 (]: 6 of 20 PASS not_null_gl_activity_player_id .................................... [[32mPASS[0m in 0.35s]
+[0m00:46:27.685458 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034
+[0m00:46:27.685863 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad
+[0m00:46:27.686312 [info ] [Thread-2 (]: 7 of 20 START test not_null_gl_activity_total_spins ............................ [RUN]
+[0m00:46:27.686914 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_gl_activity_player_id.ea7d8ef034, now test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad)
+[0m00:46:27.687391 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad
+[0m00:46:27.693392 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad"
+[0m00:46:27.694152 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad
+[0m00:46:27.695429 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad"
+[0m00:46:27.696267 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad"
+[0m00:46:27.696554 [debug] [Thread-2 (]: On test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select total_spins
+from CASINO_GAMES_DB.GOLD.gl_activity
+where total_spins is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad"} */
+[0m00:46:28.040612 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.344 seconds
+[0m00:46:28.044452 [info ] [Thread-2 (]: 7 of 20 PASS not_null_gl_activity_total_spins .................................. [[32mPASS[0m in 0.36s]
+[0m00:46:28.046152 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad
+[0m00:46:28.046812 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64
+[0m00:46:28.047683 [info ] [Thread-2 (]: 8 of 20 START test not_null_slv_dim_game_game_id ............................... [RUN]
+[0m00:46:28.048615 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_gl_activity_total_spins.b9f5f058ad, now test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64)
+[0m00:46:28.049192 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64
+[0m00:46:28.056893 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64"
+[0m00:46:28.057866 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64
+[0m00:46:28.059245 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64"
+[0m00:46:28.060300 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64"
+[0m00:46:28.060635 [debug] [Thread-2 (]: On test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select game_id
+from CASINO_GAMES_DB.SILVER.slv_dim_game
+where game_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64"} */
+[0m00:46:28.529743 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.469 seconds
+[0m00:46:28.532156 [info ] [Thread-2 (]: 8 of 20 PASS not_null_slv_dim_game_game_id ..................................... [[32mPASS[0m in 0.48s]
+[0m00:46:28.533013 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64
+[0m00:46:28.533413 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d
+[0m00:46:28.533836 [info ] [Thread-2 (]: 9 of 20 START test not_null_slv_dim_game_game_type ............................. [RUN]
+[0m00:46:28.534743 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_slv_dim_game_game_id.3bd9645a64, now test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d)
+[0m00:46:28.535107 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d
+[0m00:46:28.540162 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d"
+[0m00:46:28.540929 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d
+[0m00:46:28.542170 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d"
+[0m00:46:28.543043 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d"
+[0m00:46:28.543334 [debug] [Thread-2 (]: On test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select game_type
+from CASINO_GAMES_DB.SILVER.slv_dim_game
+where game_type is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d"} */
+[0m00:46:29.017439 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.474 seconds
+[0m00:46:29.020876 [info ] [Thread-2 (]: 9 of 20 PASS not_null_slv_dim_game_game_type ................................... [[32mPASS[0m in 0.49s]
+[0m00:46:29.021969 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d
+[0m00:46:29.022470 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe
+[0m00:46:29.022988 [info ] [Thread-2 (]: 10 of 20 START test not_null_slv_fact_activity_casino_id ....................... [RUN]
+[0m00:46:29.023784 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_slv_dim_game_game_type.21d5ebc08d, now test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe)
+[0m00:46:29.024260 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe
+[0m00:46:29.030733 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe"
+[0m00:46:29.031504 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe
+[0m00:46:29.032760 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe"
+[0m00:46:29.033592 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe"
+[0m00:46:29.033886 [debug] [Thread-2 (]: On test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select casino_id
+from CASINO_GAMES_DB.SILVER.slv_fact_activity
+where casino_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe"} */
+[0m00:46:29.478288 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.444 seconds
+[0m00:46:29.481741 [info ] [Thread-2 (]: 10 of 20 PASS not_null_slv_fact_activity_casino_id ............................. [[32mPASS[0m in 0.46s]
+[0m00:46:29.482973 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe
+[0m00:46:29.483497 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712
+[0m00:46:29.484067 [info ] [Thread-2 (]: 11 of 20 START test not_null_slv_fact_activity_currency_id ..................... [RUN]
+[0m00:46:29.484951 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_slv_fact_activity_casino_id.808dea83fe, now test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712)
+[0m00:46:29.485447 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712
+[0m00:46:29.490959 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712"
+[0m00:46:29.491785 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712
+[0m00:46:29.493116 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712"
+[0m00:46:29.494023 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712"
+[0m00:46:29.494434 [debug] [Thread-2 (]: On test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select currency_id
+from CASINO_GAMES_DB.SILVER.slv_fact_activity
+where currency_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712"} */
+[0m00:46:29.929310 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.434 seconds
+[0m00:46:29.934454 [info ] [Thread-2 (]: 11 of 20 PASS not_null_slv_fact_activity_currency_id ........................... [[32mPASS[0m in 0.45s]
+[0m00:46:29.935802 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712
+[0m00:46:29.936505 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4
+[0m00:46:29.937228 [info ] [Thread-2 (]: 12 of 20 START test not_null_slv_fact_activity_game_id ......................... [RUN]
+[0m00:46:29.938173 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_slv_fact_activity_currency_id.bdf4cc5712, now test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4)
+[0m00:46:29.938784 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4
+[0m00:46:29.955374 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4"
+[0m00:46:29.957451 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4
+[0m00:46:29.963762 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4"
+[0m00:46:29.967985 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4"
+[0m00:46:29.969249 [debug] [Thread-2 (]: On test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select game_id
+from CASINO_GAMES_DB.SILVER.slv_fact_activity
+where game_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4"} */
+[0m00:46:30.498608 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.528 seconds
+[0m00:46:30.503990 [info ] [Thread-2 (]: 12 of 20 PASS not_null_slv_fact_activity_game_id ............................... [[32mPASS[0m in 0.57s]
+[0m00:46:30.506834 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4
+[0m00:46:30.508009 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457
+[0m00:46:30.509199 [info ] [Thread-2 (]: 13 of 20 START test not_null_slv_fact_activity_player_id ....................... [RUN]
+[0m00:46:30.510392 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_slv_fact_activity_game_id.384f7b9fe4, now test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457)
+[0m00:46:30.511234 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457
+[0m00:46:30.527416 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457"
+[0m00:46:30.531226 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457
+[0m00:46:30.538733 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457"
+[0m00:46:30.545068 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457"
+[0m00:46:30.548299 [debug] [Thread-2 (]: On test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select player_id
+from CASINO_GAMES_DB.SILVER.slv_fact_activity
+where player_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457"} */
+[0m00:46:30.938377 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.388 seconds
+[0m00:46:30.940174 [info ] [Thread-2 (]: 13 of 20 PASS not_null_slv_fact_activity_player_id ............................. [[32mPASS[0m in 0.43s]
+[0m00:46:30.940829 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457
+[0m00:46:30.941226 [debug] [Thread-2 (]: Began running node test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d
+[0m00:46:30.942189 [info ] [Thread-2 (]: 14 of 20 START test not_null_slv_fact_activity_total_spins ..................... [RUN]
+[0m00:46:30.944106 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_slv_fact_activity_player_id.ef1991d457, now test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d)
+[0m00:46:30.945309 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d
+[0m00:46:30.963573 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d"
+[0m00:46:30.967651 [debug] [Thread-2 (]: Began executing node test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d
+[0m00:46:30.976089 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d"
+[0m00:46:30.980477 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d"
+[0m00:46:30.982047 [debug] [Thread-2 (]: On test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select total_spins
+from CASINO_GAMES_DB.SILVER.slv_fact_activity
+where total_spins is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d"} */
+[0m00:46:31.432066 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.449 seconds
+[0m00:46:31.435850 [info ] [Thread-2 (]: 14 of 20 PASS not_null_slv_fact_activity_total_spins ........................... [[32mPASS[0m in 0.49s]
+[0m00:46:31.436742 [debug] [Thread-2 (]: Finished running node test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d
+[0m00:46:31.437158 [debug] [Thread-2 (]: Began running node test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2
+[0m00:46:31.437554 [info ] [Thread-2 (]: 15 of 20 START test relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_  [RUN]
+[0m00:46:31.438205 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.not_null_slv_fact_activity_total_spins.93daefde9d, now test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2)
+[0m00:46:31.438707 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2
+[0m00:46:31.484198 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2"
+[0m00:46:31.487723 [debug] [Thread-2 (]: Began executing node test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2
+[0m00:46:31.493534 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2"
+[0m00:46:31.497891 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2"
+[0m00:46:31.498876 [debug] [Thread-2 (]: On test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select currency_id as from_field
+    from CASINO_GAMES_DB.GOLD.gl_activity
+    where currency_id is not null
+),
+
+parent as (
+    select currency_id as to_field
+    from CASINO_GAMES_DB.SILVER.slv_dim_currency
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2"} */
+[0m00:46:32.084142 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.584 seconds
+[0m00:46:32.096099 [info ] [Thread-2 (]: 15 of 20 PASS relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_  [[32mPASS[0m in 0.66s]
+[0m00:46:32.098961 [debug] [Thread-2 (]: Finished running node test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2
+[0m00:46:32.100435 [debug] [Thread-2 (]: Began running node test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86
+[0m00:46:32.102480 [info ] [Thread-2 (]: 16 of 20 START test relationships_gl_activity_game_id__game_id__ref_slv_dim_game_  [RUN]
+[0m00:46:32.104748 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.relationships_gl_activity_currency_id__currency_id__ref_slv_dim_currency_.2858b54ef2, now test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86)
+[0m00:46:32.106288 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86
+[0m00:46:32.166090 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86"
+[0m00:46:32.169268 [debug] [Thread-2 (]: Began executing node test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86
+[0m00:46:32.173857 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86"
+[0m00:46:32.181088 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86"
+[0m00:46:32.182443 [debug] [Thread-2 (]: On test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select game_id as from_field
+    from CASINO_GAMES_DB.GOLD.gl_activity
+    where game_id is not null
+),
+
+parent as (
+    select game_id as to_field
+    from CASINO_GAMES_DB.SILVER.slv_dim_game
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86"} */
+[0m00:46:32.652747 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.469 seconds
+[0m00:46:32.657069 [info ] [Thread-2 (]: 16 of 20 PASS relationships_gl_activity_game_id__game_id__ref_slv_dim_game_ .... [[32mPASS[0m in 0.55s]
+[0m00:46:32.662054 [debug] [Thread-2 (]: Finished running node test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86
+[0m00:46:32.664196 [debug] [Thread-2 (]: Began running node test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1
+[0m00:46:32.667170 [info ] [Thread-2 (]: 17 of 20 START test relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_  [RUN]
+[0m00:46:32.669715 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.relationships_gl_activity_game_id__game_id__ref_slv_dim_game_.ba85ac7e86, now test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1)
+[0m00:46:32.671611 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1
+[0m00:46:32.731508 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1"
+[0m00:46:32.735086 [debug] [Thread-2 (]: Began executing node test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1
+[0m00:46:32.740713 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1"
+[0m00:46:32.745779 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1"
+[0m00:46:32.747479 [debug] [Thread-2 (]: On test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select currency_id as from_field
+    from CASINO_GAMES_DB.SILVER.slv_fact_activity
+    where currency_id is not null
+),
+
+parent as (
+    select currency_id as to_field
+    from CASINO_GAMES_DB.SILVER.slv_dim_currency
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1"} */
+[0m00:46:33.470929 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.722 seconds
+[0m00:46:33.479234 [info ] [Thread-2 (]: 17 of 20 PASS relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_  [[32mPASS[0m in 0.81s]
+[0m00:46:33.483183 [debug] [Thread-2 (]: Finished running node test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1
+[0m00:46:33.485268 [debug] [Thread-2 (]: Began running node test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a
+[0m00:46:33.487608 [info ] [Thread-2 (]: 18 of 20 START test relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_  [RUN]
+[0m00:46:33.492146 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.relationships_slv_fact_activity_currency_id__currency_id__ref_slv_dim_currency_.63ad22f9f1, now test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a)
+[0m00:46:33.495084 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a
+[0m00:46:33.548904 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a"
+[0m00:46:33.553840 [debug] [Thread-2 (]: Began executing node test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a
+[0m00:46:33.556728 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a"
+[0m00:46:33.562039 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a"
+[0m00:46:33.563821 [debug] [Thread-2 (]: On test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select game_id as from_field
+    from CASINO_GAMES_DB.SILVER.slv_fact_activity
+    where game_id is not null
+),
+
+parent as (
+    select game_id as to_field
+    from CASINO_GAMES_DB.SILVER.slv_dim_game
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a"} */
+[0m00:46:34.079197 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.514 seconds
+[0m00:46:34.088759 [info ] [Thread-2 (]: 18 of 20 PASS relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_  [[32mPASS[0m in 0.60s]
+[0m00:46:34.091849 [debug] [Thread-2 (]: Finished running node test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a
+[0m00:46:34.094366 [debug] [Thread-2 (]: Began running node test.casino_games_models.total_spins_not_zero
+[0m00:46:34.096602 [info ] [Thread-2 (]: 19 of 20 START test total_spins_not_zero ....................................... [RUN]
+[0m00:46:34.099683 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.relationships_slv_fact_activity_game_id__game_id__ref_slv_dim_game_.2b45118b3a, now test.casino_games_models.total_spins_not_zero)
+[0m00:46:34.102215 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.total_spins_not_zero
+[0m00:46:34.110609 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.total_spins_not_zero"
+[0m00:46:34.115941 [debug] [Thread-2 (]: Began executing node test.casino_games_models.total_spins_not_zero
+[0m00:46:34.130592 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.total_spins_not_zero"
+[0m00:46:34.139578 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.total_spins_not_zero"
+[0m00:46:34.145636 [debug] [Thread-2 (]: On test.casino_games_models.total_spins_not_zero: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select 
+        casino_id,
+        player_id,
+        game_id,
+        total_spins
+from CASINO_GAMES_DB.SILVER.slv_fact_activity
+where total_spins < 0 -- extract checks for negative spins.
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.total_spins_not_zero"} */
+[0m00:46:34.533390 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.385 seconds
+[0m00:46:34.537521 [info ] [Thread-2 (]: 19 of 20 PASS total_spins_not_zero ............................................. [[32mPASS[0m in 0.44s]
+[0m00:46:34.539074 [debug] [Thread-2 (]: Finished running node test.casino_games_models.total_spins_not_zero
+[0m00:46:34.540043 [debug] [Thread-2 (]: Began running node test.casino_games_models.unique_slv_dim_game_game_id.96796e4803
+[0m00:46:34.541414 [info ] [Thread-2 (]: 20 of 20 START test unique_slv_dim_game_game_id ................................ [RUN]
+[0m00:46:34.543489 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.casino_games_models.total_spins_not_zero, now test.casino_games_models.unique_slv_dim_game_game_id.96796e4803)
+[0m00:46:34.544797 [debug] [Thread-2 (]: Began compiling node test.casino_games_models.unique_slv_dim_game_game_id.96796e4803
+[0m00:46:34.587714 [debug] [Thread-2 (]: Writing injected SQL for node "test.casino_games_models.unique_slv_dim_game_game_id.96796e4803"
+[0m00:46:34.593761 [debug] [Thread-2 (]: Began executing node test.casino_games_models.unique_slv_dim_game_game_id.96796e4803
+[0m00:46:34.600996 [debug] [Thread-2 (]: Writing runtime sql for node "test.casino_games_models.unique_slv_dim_game_game_id.96796e4803"
+[0m00:46:34.605850 [debug] [Thread-2 (]: Using snowflake connection "test.casino_games_models.unique_slv_dim_game_game_id.96796e4803"
+[0m00:46:34.607713 [debug] [Thread-2 (]: On test.casino_games_models.unique_slv_dim_game_game_id.96796e4803: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    game_id as unique_field,
+    count(*) as n_records
+
+from CASINO_GAMES_DB.SILVER.slv_dim_game
+where game_id is not null
+group by game_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "casino_games_models", "target_name": "dev", "node_id": "test.casino_games_models.unique_slv_dim_game_game_id.96796e4803"} */
+[0m00:46:34.999335 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.389 seconds
+[0m00:46:35.005269 [info ] [Thread-2 (]: 20 of 20 PASS unique_slv_dim_game_game_id ...................................... [[32mPASS[0m in 0.46s]
+[0m00:46:35.007398 [debug] [Thread-2 (]: Finished running node test.casino_games_models.unique_slv_dim_game_game_id.96796e4803
+[0m00:46:35.011595 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:46:35.014119 [debug] [MainThread]: Connection 'list_CASINO_GAMES_DB_GOLD' was left open.
+[0m00:46:35.015971 [debug] [MainThread]: On list_CASINO_GAMES_DB_GOLD: Close
+[0m00:46:35.663967 [debug] [MainThread]: Connection 'test.casino_games_models.unique_slv_dim_game_game_id.96796e4803' was left open.
+[0m00:46:35.665560 [debug] [MainThread]: On test.casino_games_models.unique_slv_dim_game_game_id.96796e4803: Close
+[0m00:46:36.301037 [info ] [MainThread]: 
+[0m00:46:36.305388 [info ] [MainThread]: Finished running 20 data tests in 0 hours 0 minutes and 17.58 seconds (17.58s).
+[0m00:46:36.334438 [debug] [MainThread]: Command end result
+[0m00:46:36.502029 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\manifest.json
+[0m00:46:36.510270 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\semantic_manifest.json
+[0m00:46:36.521584 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\osi_document.json
+[0m00:46:36.550557 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\phikh\Desktop\Assessment - Durban\Game\casino_games_models\target\run_results.json
+[0m00:46:36.551455 [info ] [MainThread]: 
+[0m00:46:36.553065 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:46:36.554288 [info ] [MainThread]: 
+[0m00:46:36.555480 [info ] [MainThread]: Done. PASS=20 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=20
+[0m00:46:36.557820 [debug] [MainThread]: Command `dbt test` succeeded at 00:46:36.557524 after 19.98 seconds
+[0m00:46:36.558975 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDD7CF7C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDFB8F6FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FDFB975DE0>]}
+[0m00:46:36.560005 [debug] [MainThread]: Flushing usage events
+[0m00:46:37.763101 [debug] [MainThread]: An error was encountered while trying to flush usage events
