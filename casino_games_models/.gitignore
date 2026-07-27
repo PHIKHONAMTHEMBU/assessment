@@ -1,4 +1,6 @@
-target/ 
-dbt-env/ 
-mlruns/ 
-__pycache__/ 
+"dbt-env/" 
+"target/" 
+"mlruns/" 
+"__pycache__/" 
+"*.parquet" 
+"*.csv" 
